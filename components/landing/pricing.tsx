@@ -1,65 +1,32 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { pricingPlans } from "@/lib/seo/pricing-data";
 import { cn } from "@/lib/utils";
 
-const plans = [
-  {
-    name: "Starter",
-    price: "2.90",
-    subtitle: "Pro Mitarbeiter / Monat",
-    note: "Jederzeit kündbar",
-    description:
-      "Für kleine Teams mit einfacher Dienstplanung und grundlegenden Zeitkonten.",
-    features: [
-      "Intuitive Wochenplanung",
-      "Mitarbeitersicht & Anträge",
-      "Zeitsaldo, Ferien & Soll/Ist",
-      "Standorte & Feiertage",
-      "Genehmigungs-Workflow",
-      "Hilfecenter und E-Mail-Support",
-    ],
-    badgeClass: "bg-brand-50 text-brand-700",
-    popular: false,
-  },
-  {
-    name: "Plus",
-    price: "3.90",
-    subtitle: "Pro Mitarbeiter / Monat",
-    note: "Mind. 10 Mitarbeiter",
-    description:
-      "Für Teams, bei denen Personalplanung, Zeitkonten und Abrechnung nahtlos zusammenspielen müssen.",
-    features: [
-      "Alles aus Starter",
-      "UEZ, TZT & erweiterte Zeitlogik",
-      "Audit-Log & revisionssichere Historie",
-      "Multi-Standort & Dienstvorlagen",
-      "Export & Integrationen",
-      "Priorisierter Support",
-    ],
-    badgeClass: "bg-amber-50 text-amber-700",
-    popular: true,
-  },
-] as const;
+const badgeClasses = {
+  Starter: "bg-brand-50 text-brand-700",
+  Plus: "bg-amber-50 text-amber-700",
+} as const;
 
 export function Pricing() {
   return (
-    <section id="preisgestaltung" className="py-20 sm:py-28">
+    <section id="preisgestaltung" className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">
             Preisgestaltung
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Transparente Preise für Schweizer KMU
+            Transparente Preise für kleine Teams in der Schweiz
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">
-            Wählen Sie das Paket, das zu Ihrer Teamgrösse passt – ohne
-            versteckte Kosten und mit monatlicher Kündigungsmöglichkeit.
+            Ab CHF 2.90 pro Mitarbeiter und Monat – ohne versteckte Kosten,
+            monatlich kündbar. Beispiel: 10 Mitarbeitende = CHF 29 pro Monat.
           </p>
         </div>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-2">
-          {plans.map((plan) => (
+          {pricingPlans.map((plan) => (
             <article
               key={plan.name}
               className={cn(
@@ -78,7 +45,7 @@ export function Pricing() {
               <span
                 className={cn(
                   "inline-flex w-fit rounded-lg px-3 py-1 text-sm font-semibold uppercase tracking-wide",
-                  plan.badgeClass,
+                  badgeClasses[plan.name],
                 )}
               >
                 {plan.name}
@@ -116,7 +83,7 @@ export function Pricing() {
                 className="mt-8 w-full justify-center"
                 size="lg"
               >
-                Auf die Warteliste
+                Jetzt vormerken – ab CHF {plan.price}/MA
               </Button>
             </article>
           ))}

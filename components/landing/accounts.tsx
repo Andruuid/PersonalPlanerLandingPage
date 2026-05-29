@@ -16,7 +16,8 @@ const accounts = [
   {
     icon: Scale,
     name: "UEZ & TZT",
-    description: "Überstunden und Zeitausgleich nach Schweizer Praxis abbilden.",
+    description:
+      "Überstunden und Zeitausgleich nach Schweizer Praxis abbilden.",
     tone: "from-violet-500/15 to-violet-500/5 text-violet-900",
   },
   {
@@ -29,7 +30,7 @@ const accounts = [
 
 export function Accounts() {
   return (
-    <section id="zeitkonten" className="py-20 sm:py-28">
+    <section id="zeitkonten" className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 p-8 text-white shadow-2xl shadow-slate-900/20 sm:p-12">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
@@ -38,12 +39,12 @@ export function Accounts() {
                 Zeitkonten
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Faire Abrechnung statt Excel-Tabellen
+                Zeitsaldo und Ferienplanung ohne Excel-Tabellen
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-300">
-                PersonalPlaner führt Zeitsaldo, Ferien, UEZ und TZT zentral –
-                mit automatischen Wochenbuchungen, manuellen Korrekturen und
-                vollständigem Audit-Trail für Vertrauen auf beiden Seiten.
+                Statt verstreuter Tabellen führt easyplan Zeitsaldo, Ferien,
+                Überstunden und Zeitausgleich zentral – mit automatischen
+                Wochenbuchungen und vollständiger Änderungshistorie.
               </p>
             </div>
 

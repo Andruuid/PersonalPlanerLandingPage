@@ -3,27 +3,27 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 const steps = [
   {
     number: "01",
-    title: "Stammdaten anlegen",
+    title: "Stammdaten erfassen",
     description:
-      "Mitarbeitende, Pensum, Standorte und Dienstvorlagen einmal sauber erfassen – die Basis für jede Woche.",
+      "Mitarbeitende, Pensum, Standorte und Dienstvorlagen einmal anlegen – die Basis für jede Woche.",
   },
   {
     number: "02",
-    title: "Woche planen & veröffentlichen",
+    title: "Woche planen und veröffentlichen",
     description:
-      "Im Drag-and-Drop-Raster Dienste zuweisen, KPIs prüfen und die Woche für das Team freigeben.",
+      "Schichten im Drag-and-Drop-Raster zuweisen, Besetzung prüfen und den Plan fürs Team freigeben.",
   },
   {
     number: "03",
     title: "Wünsche bearbeiten",
     description:
-      "Anträge landen direkt im Planungsboard. Admins entscheiden im Kontext – ohne Medienbruch.",
+      "Ferien- und Absenzanträge landen direkt im Planungsboard. Sie entscheiden im Kontext – ohne Medienbruch.",
   },
   {
     number: "04",
     title: "Zeitkonten aktualisieren",
     description:
-      "Nach Abschluss der Woche werden Salden automatisch gebucht. Korrekturen bleiben auditierbar.",
+      "Nach Wochenabschluss werden Salden automatisch gebucht. Korrekturen bleiben revisionssicher nachvollziehbar.",
   },
 ];
 
@@ -41,7 +41,7 @@ const employeeBenefits = [
 
 export function Workflow() {
   return (
-    <section id="ablauf" className="border-y border-slate-200 bg-white py-20 sm:py-28">
+    <section id="ablauf" className="scroll-mt-24 border-y border-slate-200 bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
@@ -49,11 +49,11 @@ export function Workflow() {
               Ablauf
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              Vom Entwurf bis zum Zeitkonto in vier Schritten
+              So funktioniert die Mitarbeiterplanung in vier Schritten
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
-              PersonalPlaner spiegelt den echten Betriebsalltag: Planen,
-              kommunizieren, entscheiden – und am Ende sauber abrechnen.
+              easyplan spiegelt den echten Betriebsalltag: Planen, kommunizieren,
+              entscheiden – und am Ende sauber abrechnen.
             </p>
 
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -62,17 +62,14 @@ export function Workflow() {
             </div>
           </div>
 
-          <div className="space-y-4">
-            {steps.map((step, index) => (
-              <article
+          <ol className="space-y-4">
+            {steps.map((step) => (
+              <li
                 key={step.number}
-                className="relative rounded-2xl border border-slate-200 bg-slate-50/70 p-5 pl-6 transition-colors hover:border-brand-200 hover:bg-brand-50/40"
+                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-6 transition-all hover:border-brand-200 hover:bg-white hover:shadow-lg hover:shadow-brand-600/5"
               >
-                {index < steps.length - 1 ? (
-                  <span className="absolute bottom-0 left-8 hidden h-full w-px translate-y-1/2 bg-gradient-to-b from-brand-200 to-transparent sm:block" />
-                ) : null}
                 <div className="flex items-start gap-4">
-                  <span className="text-sm font-semibold tracking-widest text-brand-600">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-600 text-sm font-bold text-white">
                     {step.number}
                   </span>
                   <div>
@@ -84,23 +81,10 @@ export function Workflow() {
                     </p>
                   </div>
                 </div>
-              </article>
+                <ArrowRight className="absolute bottom-5 right-5 h-5 w-5 text-slate-300 transition group-hover:translate-x-0.5 group-hover:text-brand-500" />
+              </li>
             ))}
-
-            <div className="rounded-2xl bg-slate-900 px-5 py-4 text-white">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-medium text-slate-300">
-                    Bereit für den nächsten Schritt?
-                  </p>
-                  <p className="mt-1 text-base font-semibold">
-                    Live-Demo mit echten Planungs-Szenarien
-                  </p>
-                </div>
-                <ArrowRight className="hidden h-5 w-5 shrink-0 text-brand-300 sm:block" />
-              </div>
-            </div>
-          </div>
+          </ol>
         </div>
       </div>
     </section>
@@ -116,12 +100,12 @@ function BenefitCard({
 }) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5">
-      <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+      <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
         {title}
       </h3>
-      <ul className="mt-4 space-y-3">
+      <ul className="mt-4 space-y-2">
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-2.5 text-sm text-slate-700">
+          <li key={item} className="flex items-start gap-2 text-sm text-slate-600">
             <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
             {item}
           </li>

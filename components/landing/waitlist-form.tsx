@@ -7,8 +7,20 @@ import { focusWaitlistEmail } from "@/lib/focus-waitlist";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
+const industries = [
+  "Gastronomie",
+  "Detailhandel",
+  "Dienstleistung",
+  "Coiffeur / Beauty",
+  "Sonstiges",
+];
+
+const teamSizes = ["1–5", "6–10", "11–20", "21–50", "50+"];
+
 export function WaitlistForm() {
   const [email, setEmail] = useState("");
+  const [industry, setIndustry] = useState("");
+  const [teamSize, setTeamSize] = useState("");
   const [status, setStatus] = useState<FormStatus>("idle");
   const [error, setError] = useState("");
 
@@ -40,6 +52,8 @@ export function WaitlistForm() {
 
     if (!endpoint) {
       setEmail("");
+      setIndustry("");
+      setTeamSize("");
       setStatus("success");
       setError("");
       return;
@@ -57,6 +71,8 @@ export function WaitlistForm() {
         },
         body: JSON.stringify({
           email,
+          industry: industry || undefined,
+          teamSize: teamSize || undefined,
           source: siteConfig.source,
         }),
       });
@@ -68,6 +84,8 @@ export function WaitlistForm() {
       }
 
       setEmail("");
+      setIndustry("");
+      setTeamSize("");
       setStatus("success");
     } catch {
       setStatus("error");
@@ -79,11 +97,8 @@ export function WaitlistForm() {
 
   return (
     <div>
-      <form
-        onSubmit={handleSubmit}
-        className="scroll-mt-28 flex flex-col gap-3 sm:flex-row sm:items-stretch"
-      >
-        <div className="relative min-w-0 flex-1">
+      <form onSubmit={handleSubmit} className="scroll-mt-28 space-y-3">
+        <div className="relative min-w-0">
           <label htmlFor="waitlist-email" className="sr-only">
             E-Mail
           </label>
@@ -111,16 +126,59 @@ export function WaitlistForm() {
           />
         </div>
 
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div>
+            <label htmlFor="waitlist-industry" className="sr-only">
+              Branche
+            </label>
+            <select
+              id="waitlist-industry"
+              name="industry"
+              value={industry}
+              onChange={(event) => setIndustry(event.target.value)}
+              disabled={isLoading || status === "success"}
+              className="w-full rounded-xl border-0 bg-white/95 px-4 py-3 text-sm text-slate-900 shadow-lg shadow-black/10 outline-none focus:ring-2 focus:ring-white/40 disabled:opacity-60"
+            >
+              <option value="">Branche (optional)</option>
+              {industries.map((value) => (
+                <option key={value} value={value}>
+                  {value}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="waitlist-team-size" className="sr-only">
+              Teamgrösse
+            </label>
+            <select
+              id="waitlist-team-size"
+              name="teamSize"
+              value={teamSize}
+              onChange={(event) => setTeamSize(event.target.value)}
+              disabled={isLoading || status === "success"}
+              className="w-full rounded-xl border-0 bg-white/95 px-4 py-3 text-sm text-slate-900 shadow-lg shadow-black/10 outline-none focus:ring-2 focus:ring-white/40 disabled:opacity-60"
+            >
+              <option value="">Teamgrösse (optional)</option>
+              {teamSizes.map((value) => (
+                <option key={value} value={value}>
+                  {value} Mitarbeitende
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
         <button
           type="submit"
           disabled={isLoading || status === "success"}
-          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-brand-50 px-6 py-3.5 text-sm font-semibold text-brand-800 shadow-lg shadow-black/10 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-50"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-50 px-6 py-3.5 text-sm font-semibold text-brand-800 shadow-lg shadow-black/10 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isLoading ? (
             <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
           ) : (
             <>
-              Anmelden
+              Kostenlos vormerken
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </>
           )}

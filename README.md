@@ -1,6 +1,6 @@
-# PersonalPlaner Landing Page
+# easyplan Landing Page
 
-Moderne Marketing-Landing-Page für [PersonalPlaner](https://github.com/Andruuid/PersonalPlanerMVP) – Personalplanung & Zeitkonten für Schweizer KMU.
+Moderne Marketing-Landing-Page für [easyplan](https://www.easyplaner.ch) – Personalplanung & Zeitkonten für Schweizer KMU.
 
 ## Tech-Stack
 
@@ -20,23 +20,16 @@ Die Seite läuft unter [http://localhost:3000](http://localhost:3000).
 
 ## Konfiguration
 
-Optional kann die URL zur Live-App gesetzt werden:
-
 ```env
-NEXT_PUBLIC_APP_URL=https://ihre-app-url.ch
-```
-
-Standardmässig verweisen die Buttons auf das PersonalPlanerMVP-Repository.
-
-### Warteliste (Formspree)
-
-Das Kontaktformular sendet E-Mail-Adressen clientseitig direkt an [Formspree](https://formspree.io) – ohne eigenes Backend, SMTP oder API-Route. Weiterleitung und Benachrichtigungen werden im Formspree-Dashboard konfiguriert (Form → Notification Email).
-
-```env
+NEXT_PUBLIC_SITE_URL=https://www.easyplaner.ch
 NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/ihre-form-id
 ```
 
 Lokal in `.env.local` (siehe `.env.local.example`), in Production in den Hosting-Settings (z. B. Vercel).
+
+### Warteliste (Formspree)
+
+Das Kontaktformular sendet E-Mail-Adressen clientseitig direkt an [Formspree](https://formspree.io) – ohne eigenes Backend, SMTP oder API-Route.
 
 **Formspree-Setup:**
 
@@ -47,7 +40,15 @@ Lokal in `.env.local` (siehe `.env.local.example`), in Production in den Hosting
 
 Ohne gesetzte Env-Variable simuliert das Formular lokal einen erfolgreichen Versand (Dev-Fallback).
 
-Statische `mailto:`-Links (z. B. `hello@personalplaner.ch`) können unabhängig davon über Domain-Alias/Weiterleitung beim E-Mail-Provider eingerichtet werden.
+## SEO
+
+- Sitemap: `/sitemap.xml`
+- Robots: `/robots.txt`
+- Strukturierte Daten (Organization, SoftwareApplication, FAQPage)
+- SEO-Unterseiten für Branchen und Keywords
+- Off-Page-Setup: siehe [`docs/SEO-SETUP.md`](docs/SEO-SETUP.md)
+
+Domain-Redirects (301) für `mitarbeiterplaner.ch` / `.info` sind in [`vercel.json`](vercel.json) definiert.
 
 ## Skripte
 
@@ -60,4 +61,4 @@ Statische `mailto:`-Links (z. B. `hello@personalplaner.ch`) können unabhängig 
 
 ## Deployment
 
-Das Projekt ist als statische Next.js-App konzipiert und kann z. B. auf Vercel oder Netlify deployt werden.
+Das Projekt ist als statische Next.js-App konzipiert und kann z. B. auf Vercel deployt werden. Canonical-Domain: `https://www.easyplaner.ch`.

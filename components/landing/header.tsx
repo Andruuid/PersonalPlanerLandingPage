@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { LogoLink } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
@@ -39,13 +40,13 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {siteConfig.nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-900"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -69,14 +70,14 @@ export function Header() {
         <div className="border-t border-slate-200 bg-white px-4 py-4 md:hidden">
           <nav className="flex flex-col gap-1">
             {siteConfig.nav.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <div className="mt-3 border-t border-slate-100 pt-3">
               <Button

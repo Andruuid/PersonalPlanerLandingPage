@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CalendarRange,
   ClipboardCheck,
@@ -10,57 +12,57 @@ import {
 const features = [
   {
     icon: LayoutGrid,
-    title: "Intuitive Wochenplanung",
+    title: "Wochenplanung per Drag-and-Drop",
     description:
-      "Planen Sie Dienste per Drag-and-Drop im Wochenraster – mit KPIs, Detailansicht und klarer Status-Maschine von Entwurf bis Abschluss.",
+      "Erstellen Sie den Wochendienstplan im Raster – mit Besetzungsübersicht, KPIs und klarem Status von Entwurf bis Veröffentlichung.",
   },
   {
     icon: Users,
-    title: "Mitarbeitersicht & Anträge",
+    title: "Mitarbeiter-App für Schichtplan und Anträge",
     description:
-      "Ihr Team sieht Schichten und Zeitkonten jederzeit – auch unterwegs auf dem Smartphone. Ferien, Absenzen und TZT-Wünsche lassen sich direkt melden, ohne E-Mail-Pingpong.",
+      "Ihr Team sieht Schichten und Zeitkonten jederzeit auf dem Smartphone. Ferien, Absenzen und Teilzeitausgleich-Wünsche (TZT) lassen sich direkt melden – ohne E-Mail-Pingpong.",
   },
   {
     icon: Clock3,
-    title: "Schweizer Zeitlogik",
+    title: "Zeitsaldo, Ferien und Abwesenheiten",
     description:
-      "Sollzeit, Zeitsaldo, UEZ, Ferien und TZT werden automatisch gebucht – inklusive manueller Korrekturen und Jahreswechsel.",
+      "Soll- und Ist-Zeiten, Ferienanspruch und Überzeitausgleich (UEZ) werden automatisch gebucht – inklusive manueller Korrekturen und Jahreswechsel nach Schweizer Praxis.",
   },
   {
     icon: CalendarRange,
-    title: "Standorte & Feiertage",
+    title: "Mehrere Standorte und Feiertage",
     description:
-      "Verwalten Sie mehrere Standorte, Dienstvorlagen und regionale Feiertagskalender zentral für Ihren Betrieb.",
+      "Verwalten Sie Filialen, Dienstvorlagen und kantonale Feiertagskalender zentral – ideal für Betriebe mit mehr als einem Standort.",
   },
   {
     icon: ClipboardCheck,
-    title: "Genehmigungs-Workflow",
+    title: "Ferien- und Absenzwünsche genehmigen",
     description:
-      "Admins prüfen Wünsche im Planungskontext, genehmigen oder lehnen ab – mit nachvollziehbarer Historie im Audit-Log.",
+      "Anträge erscheinen direkt im Planungsboard. Sie entscheiden im Kontext – mit nachvollziehbarer Historie aller Änderungen.",
   },
   {
     icon: ShieldCheck,
-    title: "Multi-Tenant & Datenschutz",
+    title: "Datenschutz & revisionssichere Historie",
     description:
-      "Mehrere Betriebe sauber getrennt, rollenbasierte Rechte und DSGVO-konforme Export- sowie Löschanfragen integriert.",
+      "Rollenbasierte Rechte, getrennte Mandanten und DSGVO-konforme Export- sowie Löschanfragen – damit Sie und Ihr Team sicher planen können.",
   },
 ];
 
 export function Features() {
   return (
-    <section id="funktionen" className="py-20 sm:py-28">
+    <section id="funktionen" className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">
             Funktionen
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Alles für den Alltag in Gastronomie, Pflege und Dienstleistung
+            Funktionen für Gastronomie, Detailhandel und Dienstleistung
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">
-            PersonalPlaner verbindet Planung, Kommunikation und Zeitkonten in
-            einer Oberfläche – entwickelt für Betriebe, die schnell planen und
-            fair abrechnen müssen.
+            easyplan verbindet Schichtplanung, Mitarbeiterkommunikation und
+            Zeitkonten in einer Oberfläche – ohne Schulungswochen und ohne
+            IT-Abteilung.
           </p>
         </div>
 

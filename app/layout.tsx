@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Inter, Nunito } from "next/font/google";
+import { JsonLd } from "@/components/seo/json-ld";
+import { homeMetadata } from "@/lib/seo/metadata";
+import { globalSchemas } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -22,25 +25,11 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  ...homeMetadata,
   title: {
-    default: siteConfig.name,
+    default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  keywords: [
-    "Personalplanung",
-    "Zeitkonten",
-    "Schweizer KMU",
-    "Dienstplan",
-    "Ferienverwaltung",
-    "Zeitsaldo",
-    "UEZ",
-  ],
-  openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    type: "website",
-    locale: "de_CH",
   },
 };
 
@@ -51,10 +40,11 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="de"
+      lang="de-CH"
       className={`${inter.variable} ${geistMono.variable} ${nunito.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+        <JsonLd data={globalSchemas()} />
         {children}
       </body>
     </html>
