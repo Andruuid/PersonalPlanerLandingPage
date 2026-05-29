@@ -142,7 +142,7 @@ export function WaitlistForm() {
             }}
             disabled={isLoading}
             placeholder="ihre@email.ch"
-            className="w-full rounded-xl border-0 bg-white py-3.5 pl-12 pr-4 text-sm font-medium text-slate-900 shadow-lg shadow-black/10 outline-none placeholder:font-normal placeholder:text-slate-400 focus:ring-2 focus:ring-white/40 disabled:opacity-60"
+            className="w-full scroll-mt-28 rounded-xl border-0 bg-white py-3.5 pl-12 pr-4 text-sm font-medium text-slate-900 shadow-lg shadow-black/10 outline-none placeholder:font-normal placeholder:text-slate-400 focus:ring-2 focus:ring-white/40 disabled:opacity-60"
           />
         </div>
 

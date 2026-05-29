@@ -6,7 +6,6 @@ import { Menu, X } from "lucide-react";
 import { LogoLink } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
-import { focusWaitlistEmail } from "@/lib/focus-waitlist";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -19,12 +18,6 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  function handleDemoClick(event: React.MouseEvent) {
-    event.preventDefault();
-    setOpen(false);
-    focusWaitlistEmail();
-  }
 
   return (
     <header
@@ -51,7 +44,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button href="#waitlist-email" size="sm" onClick={handleDemoClick}>
+          <Button href="#waitlist-email" size="sm" onClick={() => setOpen(false)}>
             Demo anfragen
           </Button>
         </div>
@@ -83,7 +76,7 @@ export function Header() {
               <Button
                 href="#waitlist-email"
                 className="w-full justify-center"
-                onClick={handleDemoClick}
+                onClick={() => setOpen(false)}
               >
                 Demo anfragen
               </Button>

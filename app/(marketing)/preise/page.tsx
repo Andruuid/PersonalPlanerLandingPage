@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Pricing } from "@/components/landing/pricing";
+import { WaitlistLink } from "@/components/ui/waitlist-link";
 import { JsonLd } from "@/components/seo/json-ld";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { softwareApplicationSchema } from "@/lib/seo/schema";
@@ -44,13 +45,10 @@ export default function PreisePage() {
         <Pricing />
 
         <div className="mx-auto max-w-3xl px-4 pb-20 text-center sm:px-6 lg:px-8">
-          <Link
-            href="/#waitlist-email"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800"
-          >
+          <WaitlistLink className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800">
             Jetzt unverbindlich vormerken
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </WaitlistLink>
         </div>
       </div>
     </>

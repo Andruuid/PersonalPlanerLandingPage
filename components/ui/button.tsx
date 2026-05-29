@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { handleWaitlistClick, isWaitlistHref } from "@/lib/focus-waitlist";
 import { cn } from "@/lib/utils";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
@@ -46,6 +49,14 @@ export function Button({
   );
 
   if (href) {
+    const linkClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
+      if (isWaitlistHref(href)) {
+        handleWaitlistClick(event, href);
+      }
+
+      onClick?.(event);
+    };
+
     if (external) {
       return (
         <a
@@ -60,8 +71,16 @@ export function Button({
       );
     }
 
+    if (href.startsWith("#")) {
+      return (
+        <a href={href} className={classes} onClick={linkClick}>
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <Link href={href} className={classes} onClick={onClick}>
+      <Link href={href} className={classes} onClick={linkClick}>
         {children}
       </Link>
     );

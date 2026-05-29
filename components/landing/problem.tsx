@@ -18,7 +18,7 @@ export function Problem() {
           </p>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">
             easyplan bringt Dienstplan, Ferienplanung und Zeitsaldo in eine
-            Cloud-Lösung – entwickelt für Betriebe mit 5 bis 50 Mitarbeitenden,
+            Cloud-Lösung – entwickelt für Betriebe ab 5 Mitarbeitenden,
             die keine komplexe HR-Software brauchen, sondern einen Plan, der im
             Alltag funktioniert.
           </p>

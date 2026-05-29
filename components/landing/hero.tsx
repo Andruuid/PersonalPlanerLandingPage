@@ -4,20 +4,17 @@ import { Fragment } from "react";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
-import { focusWaitlistEmail } from "@/lib/focus-waitlist";
 
 const highlights = [
   "Schichtplan per Drag-and-Drop – Woche in Minuten statt Stunden",
   "Ferien, Absenzen und Zeitsaldo in Echtzeit",
   "Mitarbeiter-App: Schichtplan und Anträge jederzeit auf dem Handy",
+  "Mehrere Standorte und Betriebe – zentral planen und verwalten",
+  "Revisionssichere Historie – jede Änderung nachvollziehbar",
+  "Datenschutz und rollenbasierte Rechte für Ihr Team",
 ];
 
 export function Hero() {
-  function handleDemoClick(event: React.MouseEvent) {
-    event.preventDefault();
-    focusWaitlistEmail();
-  }
-
   return (
     <section className="relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-24">
       <div className="hero-glow absolute inset-0 -z-10" />
@@ -31,11 +28,10 @@ export function Hero() {
           </div>
 
           <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-[3.35rem] lg:leading-[1.08]">
-            Personalplanung Software für Schweizer KMU –{" "}
+            Personalplanung für Schweizer KMU – Dienstplan, Ferien und Zeitsaldo{" "}
             <span className="bg-gradient-to-r from-brand-700 via-brand-500 to-sky-500 bg-clip-text text-transparent">
-              Dienstplan, Ferien und Zeitsaldo
-            </span>{" "}
-            in einer App
+              so einfach wie nie
+            </span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
@@ -45,7 +41,7 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button href="#waitlist-email" size="lg" onClick={handleDemoClick}>
+            <Button href="#waitlist-email" size="lg">
               Kostenlos vormerken
               <ArrowRight className="h-4 w-4" />
             </Button>
@@ -54,7 +50,6 @@ export function Hero() {
               variant="ghost"
               size="lg"
               className="border border-slate-200 bg-white text-slate-800 shadow-sm hover:bg-slate-50"
-              onClick={handleDemoClick}
             >
               Demo anfragen
             </Button>

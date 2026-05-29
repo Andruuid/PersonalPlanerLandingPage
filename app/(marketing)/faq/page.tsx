@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { WaitlistLink } from "@/components/ui/waitlist-link";
 import { JsonLd } from "@/components/seo/json-ld";
 import { faqItems } from "@/lib/seo/faq-data";
 import { createPageMetadata } from "@/lib/seo/metadata";
@@ -53,13 +54,10 @@ export default function FaqPage() {
           <p className="mt-2 text-slate-600">
             Tragen Sie sich unverbindlich ein – wir melden uns bei Ihnen.
           </p>
-          <Link
-            href="/#waitlist-email"
-            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800"
-          >
+          <WaitlistLink className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800">
             Kostenlos vormerken
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </WaitlistLink>
         </div>
       </article>
     </>
