@@ -3,16 +3,16 @@
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
-  --brand-50: #ecfdf5;
-  --brand-100: #d1fae5;
-  --brand-200: #a7f3d0;
-  --brand-300: #6ee7b7;
-  --brand-400: #34d399;
-  --brand-500: #10b981;
-  --brand-600: #059669;
-  --brand-700: #047857;
-  --brand-800: #065f46;
-  --brand-900: #064e3b;
+  --brand-50: #edfafa;
+  --brand-100: #d5f3f0;
+  --brand-200: #abe7e1;
+  --brand-300: #6fd4ca;
+  --brand-400: #3ab8ad;
+  --brand-500: #16a095;
+  --brand-600: #128a81;
+  --brand-700: #107a71;
+  --brand-800: #0d625b;
+  --brand-900: #0d2c5c;
 }
 
 @theme inline {
@@ -30,6 +30,7 @@
   --color-brand-900: var(--brand-900);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
+  --font-logo: var(--font-nunito), ui-rounded, system-ui, sans-serif;
 }
 
 html {
@@ -74,7 +75,7 @@ body {
 
 .hero-glow {
   background:
-    radial-gradient(circle at 20% 20%, rgb(16 185 129 / 0.18), transparent 45%),
-    radial-gradient(circle at 80% 0%, rgb(14 165 233 / 0.12), transparent 40%),
+    radial-gradient(circle at 20% 20%, rgb(22 160 149 / 0.16), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgb(13 44 92 / 0.06), transparent 40%),
     radial-gradient(circle at 50% 100%, rgb(15 23 42 / 0.08), transparent 50%);
 }

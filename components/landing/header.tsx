@@ -35,7 +35,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <LogoLink height={34} />
+        <LogoLink iconSize={34} />
 
         <nav className="hidden items-center gap-8 md:flex">
           {siteConfig.nav.map((item) => (

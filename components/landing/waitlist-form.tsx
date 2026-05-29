@@ -81,56 +81,53 @@ export function WaitlistForm() {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="scroll-mt-28 flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-slate-900"
+        className="scroll-mt-28 flex flex-col gap-3 sm:flex-row sm:items-stretch"
       >
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
-          <Mail className="h-5 w-5" aria-hidden="true" />
-        </span>
-
-        <div className="flex min-w-0 flex-1 items-center gap-3">
-          <div className="min-w-0 flex-1">
-            <label
-              htmlFor="waitlist-email"
-              className="block text-xs font-medium uppercase tracking-wide text-slate-500"
-            >
-              E-Mail
-            </label>
-            <input
-              id="waitlist-email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              required
-              value={email}
-              onChange={(event) => {
-                setEmail(event.target.value);
-                if (status === "error") {
-                  setStatus("idle");
-                  setError("");
-                }
-              }}
-              disabled={isLoading || status === "success"}
-              placeholder="ihre@email.ch"
-              className="w-full bg-transparent text-sm font-semibold text-slate-900 outline-none placeholder:font-normal placeholder:text-slate-400 disabled:opacity-60"
-            />
-          </div>
-
-          <button
-            type="submit"
+        <div className="relative min-w-0 flex-1">
+          <label htmlFor="waitlist-email" className="sr-only">
+            E-Mail
+          </label>
+          <Mail
+            className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-brand-600"
+            aria-hidden="true"
+          />
+          <input
+            id="waitlist-email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+              if (status === "error") {
+                setStatus("idle");
+                setError("");
+              }
+            }}
             disabled={isLoading || status === "success"}
-            aria-label="E-Mail senden"
-            className="shrink-0 rounded-lg p-2 text-slate-400 transition-colors hover:bg-slate-50 hover:text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            {isLoading ? (
-              <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-            ) : (
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            )}
-          </button>
+            placeholder="ihre@email.ch"
+            className="w-full rounded-xl border-0 bg-white py-3.5 pl-12 pr-4 text-sm font-medium text-slate-900 shadow-lg shadow-black/10 outline-none placeholder:font-normal placeholder:text-slate-400 focus:ring-2 focus:ring-white/40 disabled:opacity-60"
+          />
         </div>
+
+        <button
+          type="submit"
+          disabled={isLoading || status === "success"}
+          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-brand-50 px-6 py-3.5 text-sm font-semibold text-brand-800 shadow-lg shadow-black/10 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {isLoading ? (
+            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+          ) : (
+            <>
+              Anmelden
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </>
+          )}
+        </button>
       </form>
 
-      <div aria-live="polite" className="mt-3 min-h-5 text-center text-xs">
+      <div aria-live="polite" className="mt-3 min-h-5 text-sm">
         {status === "success" ? (
           <p className="text-brand-100">Danke! Wir melden uns bald bei Ihnen.</p>
         ) : null}

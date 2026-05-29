@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const plans = [
   {
     name: "Starter",
-    price: "2.9",
+    price: "2.90",
     subtitle: "Pro Mitarbeiter / Monat",
     note: "Jederzeit kündbar",
     description:

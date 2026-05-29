@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter } from "next/font/google";
+import { Geist_Mono, Inter, Nunito } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -12,6 +12,13 @@ const inter = Inter({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const nunito = Nunito({
+  subsets: ["latin", "latin-ext"],
+  weight: ["700"],
+  display: "swap",
+  variable: "--font-nunito",
 });
 
 export const metadata: Metadata = {
@@ -35,10 +42,6 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_CH",
   },
-  icons: {
-    icon: "/easyplan-logo.png",
-    apple: "/easyplan-logo.png",
-  },
 };
 
 export default function RootLayout({
@@ -47,7 +50,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${inter.variable} ${geistMono.variable} scroll-smooth`}>
+    <html
+      lang="de"
+      className={`${inter.variable} ${geistMono.variable} ${nunito.variable} scroll-smooth`}
+    >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
       </body>
