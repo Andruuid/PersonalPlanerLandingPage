@@ -4,19 +4,19 @@ export const usHome: HomeContent = {
   hero: {
     badge: "Built for US small businesses",
     titleLead:
-      "Employee scheduling for U.S. small businesses — shifts, time tracking and PTO",
+      "Employee scheduling software for small businesses — shifts, hours, and PTO",
     titleHighlight: "made simple",
     leadSuffix:
-      "No more spreadsheet chaos or scattered group texts — just a clear flow from the weekly schedule to hours and time off.",
+      "No more spreadsheet chaos or scattered group texts — just one clear flow from the weekly schedule to hours and time off.",
     primaryCta: "Join the waitlist",
     secondaryCta: "Request a demo",
     highlights: [
-      "Drag-and-drop scheduling — build a week in minutes, not hours",
-      "Time off, availability and hours tracked in real time",
-      "Team app: schedules and requests on every phone",
+      "Drag-and-drop staff scheduling — build a week in minutes, not hours",
+      "Time off, availability, and hours tracked in real time",
+      "Mobile team view: schedules and requests on every phone",
       "Multiple locations — plan and manage from one place",
       "Audit-ready history — every change is logged",
-      "Stay ahead of overtime and Fair Workweek rules",
+      "Overtime and Fair Workweek support for covered teams",
     ],
     preview: {
       eyebrow: "Weekly schedule",
@@ -51,19 +51,20 @@ export const usHome: HomeContent = {
     heading:
       "Why spreadsheets and group texts no longer cut it for scheduling",
     paragraphs: [
-      "In a restaurant, retail shop, salon, or clinic, too much runs on guesswork: shifts in spreadsheets, time-off requests over text, overtime in a separate file. It costs hours, creates miscommunication, and makes payroll error-prone.",
-      "EasyTeamPlan brings scheduling, time off, and hours into one cloud app — built for teams of 2+ that don't need heavy HR software, just a schedule that works day to day.",
+      "In a restaurant, retail shop, salon, or clinic, too much can end up in separate places: shifts in spreadsheets, time-off requests over text, overtime in another file. That costs hours, creates miscommunication, and makes payroll more error-prone.",
+      "EasyTeamPlan brings scheduling, time off, and hours into one cloud app — built for teams of 2+ that do not need heavy HR software, just a schedule that works day to day.",
     ],
     links: [
-      { label: "See features", href: "/#funktionen" },
-      { label: "Hours & time off", href: "/#zeitkonten" },
+      { label: "See features", href: "/#features" },
+      { label: "Hours & time off", href: "/#time-tracking" },
+      { label: "Staff scheduling software", href: "/staff-scheduling-software" },
     ],
   },
   features: {
     eyebrow: "Features",
-    heading: "Shift scheduling for restaurants, retail, and services",
+    heading: "Shift and staff scheduling for restaurants, retail, and services",
     intro:
-      "Whether you run a café, a boutique, a salon, or a clinic: EasyTeamPlan combines shift scheduling, team communication, and time tracking in one interface — with no training weeks and no IT department.",
+      "Whether you run a café, a boutique, a salon, or a clinic, EasyTeamPlan combines shift scheduling, team communication, and time tracking in one interface — with no training weeks and no IT department.",
     items: [
       {
         title: "Drag-and-drop weekly scheduling",
@@ -73,7 +74,7 @@ export const usHome: HomeContent = {
       {
         title: "Team app for schedules and requests",
         description:
-          "Your team sees shifts and hours anytime on their phone. Time off, availability, and shift-swap requests are submitted right in the app — no email ping-pong.",
+          "Your team sees shifts and hours anytime on their phone. Time off, availability, and shift-swap requests are submitted right in the app — no email back-and-forth.",
       },
       {
         title: "Hours, overtime, and PTO tracking",
@@ -93,7 +94,7 @@ export const usHome: HomeContent = {
       {
         title: "Fair Workweek & audit-ready records",
         description:
-          "Role-based access, two-week advance schedules, and recordkeeping that helps you stay compliant with overtime and predictive scheduling laws.",
+          "Role-based access, advance schedule posting, and recordkeeping help you support overtime and predictive scheduling workflows.",
       },
     ],
   },
@@ -101,7 +102,7 @@ export const usHome: HomeContent = {
     eyebrow: "How it works",
     heading: "How employee scheduling works in four steps",
     intro:
-      "EasyTeamPlan mirrors how your business actually runs: plan, communicate, decide — and reconcile hours cleanly at the end.",
+      "EasyTeamPlan mirrors how your business actually runs: plan the week, communicate changes, approve requests, and reconcile hours cleanly at the end.",
     steps: [
       {
         number: "01",
@@ -119,7 +120,7 @@ export const usHome: HomeContent = {
         number: "03",
         title: "Handle requests",
         description:
-          "Time-off and availability requests land right on the planning board. You decide in context — no switching tools.",
+          "Time-off and availability requests land right on the scheduling board. You decide in context — no switching tools.",
       },
       {
         number: "04",
@@ -148,12 +149,12 @@ export const usHome: HomeContent = {
       "Instead of scattered files, EasyTeamPlan keeps hours, PTO, overtime, and adjustments in one place — with automatic weekly posting and a full change history.",
     items: [
       {
-        name: "Hours balance",
-        description: "Over- and under-hours tracked by scheduled vs. actual, every week.",
+        name: "Scheduled vs. actual",
+        description: "Track planned hours against actual hours every week.",
       },
       {
         name: "PTO & time off",
-        description: "Accruals, used days, and remaining balance always clear.",
+        description: "Accruals, used days, and remaining balances stay clear.",
       },
       {
         name: "Overtime (FLSA)",
@@ -169,7 +170,7 @@ export const usHome: HomeContent = {
     eyebrow: "Pricing",
     heading: "Simple pricing for small US teams",
     intro:
-      "From $2.99 per employee per month — no hidden fees, cancel anytime. Example: 10 employees = $29.90 per month.",
+      "From $2.99 per employee per month, with no hidden fees and no long-term commitment. Example: 10 employees = $29.90 per month.",
     popularBadge: "Most popular",
     planCta: "Join the waitlist – from {price}/employee",
   },
@@ -177,7 +178,7 @@ export const usHome: HomeContent = {
     eyebrow: "FAQ",
     heading: "Frequently asked questions about employee scheduling",
     intro:
-      "Answers about scheduling, time tracking, PTO, and pricing — for US small businesses.",
+      "Answers about employee scheduling, staff scheduling, time tracking, PTO, and pricing for US small businesses.",
     footerLeading: "Find more answers on the ",
     footerLinkLabel: "FAQ page",
     footerTrailing: ".",

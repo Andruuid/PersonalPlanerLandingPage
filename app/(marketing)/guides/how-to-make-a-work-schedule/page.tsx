@@ -9,13 +9,14 @@ import { market } from "@/lib/markets";
 import { MARKET } from "@/lib/market";
 
 export const metadata = createPageMetadata({
-  title: "How to Make a Work Schedule – A Guide for Small Businesses",
+  title: "How to Make an Employee Work Schedule – Small Business Guide",
   description:
-    "How to make a work schedule for your small business: step by step from team setup to publishing — and when scheduling software beats a spreadsheet.",
+    "How to make an employee work schedule for your small business: staff planning, availability, time off, publishing, and when scheduling software beats Excel.",
   path: "/guides/how-to-make-a-work-schedule",
   keywords: [
     "how to make a work schedule",
     "work schedule maker",
+    "staff scheduling guide",
     "employee scheduling guide",
   ],
 });
@@ -44,12 +45,12 @@ export default function HowToMakeAWorkScheduleArticle() {
         </nav>
 
         <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-          How to make a work schedule: a guide for US small businesses
+          How to make an employee work schedule: a guide for US small businesses
         </h1>
         <p className="mt-4 text-lg text-slate-600">
           A good weekly schedule saves time, prevents miscommunication, and keeps
-          time off fair. Here&apos;s how to do it step by step — and when software
-          beats a spreadsheet.
+          time off fair. Here&apos;s how to build one step by step — and when staff
+          scheduling software beats a spreadsheet.
         </p>
 
         <div className="mt-10 space-y-10 text-slate-600">
@@ -105,10 +106,15 @@ export default function HowToMakeAWorkScheduleArticle() {
             </h2>
             <p className="mt-4 leading-relaxed">
               At around five employees, the effort with a spreadsheet climbs fast.
-              A cloud tool like EasyTeamPlan combines scheduling, hours, and PTO —
-              from $2.99 per employee per month.
+              A cloud tool like EasyTeamPlan combines staff scheduling, hours, and
+              PTO — from $2.99 per employee per month.
             </p>
             <ul className="mt-4 list-disc space-y-2 pl-5">
+              <li>
+                <Link href="/staff-scheduling-software" className="text-brand-700 hover:text-brand-800">
+                  Staff scheduling software
+                </Link>
+              </li>
               <li>
                 <Link href="/excel-schedule-alternative" className="text-brand-700 hover:text-brand-800">
                   Excel schedule alternative

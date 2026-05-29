@@ -36,8 +36,8 @@ export default function TermsPage() {
           <h2 className="text-xl font-semibold text-slate-900">1. Acceptance of terms</h2>
           <p className="mt-3">
             By accessing this website you agree to these Terms of Service. If you
-            do not agree, please do not use the site. [Add legal entity name and
-            governing-law / jurisdiction]
+            do not agree, please do not use the site. The legal entity, governing
+            law, and jurisdiction will be specified before launch.
           </p>
         </section>
 

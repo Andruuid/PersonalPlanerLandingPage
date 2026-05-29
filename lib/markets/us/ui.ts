@@ -32,6 +32,13 @@ export const usUi: UiContent = {
     menuOpen: "Open menu",
     menuClose: "Close menu",
   },
+  sectionIds: {
+    features: "features",
+    workflow: "how-it-works",
+    accounts: "time-tracking",
+    pricing: "pricing",
+    faq: "faq",
+  },
   landingTemplate: {
     breadcrumbHome: "Home",
     relatedHeading: "Keep reading",
@@ -43,7 +50,7 @@ export const usUi: UiContent = {
   faqPage: {
     metaTitle: "FAQ – Employee Scheduling Software for US Small Businesses",
     metaDescription:
-      "Answers about shift scheduling, time tracking, PTO, overtime, Fair Workweek compliance, and pricing — common questions about EasyTeamPlan.",
+      "Answers about employee scheduling, staff scheduling, time tracking, PTO, overtime, Fair Workweek support, and EasyTeamPlan pricing.",
     metaKeywords: [
       "employee scheduling software FAQ",
       "shift scheduling questions",
@@ -52,7 +59,7 @@ export const usUi: UiContent = {
     breadcrumb: "FAQ",
     h1: "Frequently asked questions about employee scheduling",
     intro:
-      "Everything about scheduling, time tracking, PTO, overtime, and pricing — for restaurants, retail, and services across the US.",
+      "Everything about scheduling, time tracking, PTO, overtime, and pricing for restaurants, retail stores, and service businesses across the US.",
     ctaTitle: "Still have questions?",
     ctaText: "Join the waitlist — we'll get back to you.",
     ctaButton: "Join the waitlist",
@@ -61,7 +68,7 @@ export const usUi: UiContent = {
     path: "/pricing",
     metaTitle: "Pricing – Employee Scheduling Software from $2.99",
     metaDescription:
-      "Transparent pricing for employee scheduling software in the US. Starter from $2.99, Plus from $4.99 per employee — cancel anytime.",
+      "Transparent pricing for employee and staff scheduling software. Starter from $2.99, Plus from $4.99 per employee per month — cancel anytime.",
     metaKeywords: [
       "employee scheduling software pricing",
       "shift scheduling software cost",
@@ -70,7 +77,7 @@ export const usUi: UiContent = {
     breadcrumb: "Pricing",
     h1: "Pricing for employee scheduling software",
     intro:
-      "Simple, fair pricing for US small businesses — no setup fees and no hidden costs. You pay per employee per month.",
+      "Simple, fair pricing for US small businesses. No setup fees, no hidden costs — just one monthly price per employee.",
     bottomCta: "Join the waitlist",
   },
 };

@@ -169,6 +169,14 @@ export type HeaderContent = {
   menuClose: string;
 };
 
+export type SectionIdsContent = {
+  features: string;
+  workflow: string;
+  accounts: string;
+  pricing: string;
+  faq: string;
+};
+
 export type LandingTemplateContent = {
   breadcrumbHome: string;
   relatedHeading: string;
@@ -203,6 +211,7 @@ export type PricingPageContent = {
 export type UiContent = {
   waitlist: WaitlistFormContent;
   header: HeaderContent;
+  sectionIds: SectionIdsContent;
   landingTemplate: LandingTemplateContent;
   faqPage: FaqPageContent;
   pricingPage: PricingPageContent;

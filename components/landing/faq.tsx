@@ -3,10 +3,11 @@ import { faqItems } from "@/lib/seo/faq-data";
 import { market } from "@/lib/markets";
 
 const { faq } = market.home;
+const { sectionIds } = market.ui;
 
 export function Faq() {
   return (
-    <section id="faq" className="scroll-mt-24 py-20 sm:py-28">
+    <section id={sectionIds.faq} className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">

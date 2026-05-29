@@ -12,10 +12,15 @@ type LandingPageTemplateProps = {
 
 const { landingTemplate } = market.ui;
 
+function pageLabel(value: string) {
+  return value.split(/\s+[–—]\s+/)[0]?.trim() ?? value;
+}
+
 export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
+  const label = pageLabel(page.title);
   const breadcrumbs = [
     { name: landingTemplate.breadcrumbHome, path: "/" },
-    { name: page.h1.split("–")[0]?.trim() ?? page.title, path: page.path },
+    { name: label, path: page.path },
   ];
 
   return (
@@ -31,7 +36,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="text-slate-700">{page.title.split("–")[0]?.trim()}</li>
+            <li className="text-slate-700">{label}</li>
           </ol>
         </nav>
 

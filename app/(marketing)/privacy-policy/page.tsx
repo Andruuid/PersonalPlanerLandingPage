@@ -42,7 +42,8 @@ export default function PrivacyPolicyPage() {
             >
               {siteConfig.contactEmail}
             </a>
-            . [Add legal entity name and mailing address]
+            . The legal entity name and mailing address will be added before
+            launch.
           </p>
         </section>
 
@@ -101,8 +102,8 @@ export default function PrivacyPolicyPage() {
           </h2>
           <p className="mt-3">
             Access is role-based, and we keep personal information only as long
-            as needed for the purposes described here. [Add hosting provider and
-            location, and data-retention specifics]
+            as needed for the purposes described here. Hosting provider, storage
+            location, and detailed retention periods will be added before launch.
           </p>
         </section>
 

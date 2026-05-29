@@ -2,10 +2,14 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { market } from "@/lib/markets";
 
 const { workflow } = market.home;
+const { sectionIds } = market.ui;
 
 export function Workflow() {
   return (
-    <section id="ablauf" className="scroll-mt-24 border-y border-slate-200 bg-white py-20 sm:py-28">
+    <section
+      id={sectionIds.workflow}
+      className="scroll-mt-24 border-y border-slate-200 bg-white py-20 sm:py-28"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>

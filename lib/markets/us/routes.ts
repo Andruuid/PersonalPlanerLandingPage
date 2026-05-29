@@ -12,6 +12,11 @@ export const usSitemapRoutes: SitemapRoute[] = [
     priority: 0.9,
     changeFrequency: "monthly",
   },
+  {
+    path: "/staff-scheduling-software",
+    priority: 0.9,
+    changeFrequency: "monthly",
+  },
   { path: "/excel-schedule-alternative", priority: 0.9, changeFrequency: "monthly" },
   { path: "/shift-scheduling-software", priority: 0.9, changeFrequency: "monthly" },
   {

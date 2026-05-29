@@ -10,11 +10,11 @@ export const usPricing: PricingPlan[] = [
     subtitle: "Per employee / month",
     note: "Cancel anytime",
     description:
-      "For small teams that need simple scheduling and basic time tracking.",
+      "For small teams that need simple staff scheduling and time tracking.",
     features: [
       "Intuitive weekly scheduling",
-      "Employee app & requests",
-      "Hours, PTO & scheduled/actual",
+      "Mobile employee view & requests",
+      "Hours, PTO & scheduled vs. actual",
       "Locations & holidays",
       "Approval workflow",
       "Help center and email support",

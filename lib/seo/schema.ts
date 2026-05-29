@@ -37,7 +37,7 @@ export function softwareApplicationSchema(): JsonLd {
     "@type": "SoftwareApplication",
     name: siteConfig.name,
     applicationCategory: "BusinessApplication",
-    operatingSystem: "Web, iOS, Android",
+    operatingSystem: "Web browser",
     description: siteConfig.description,
     url: siteConfig.url,
     offers: pricingPlans.map((plan) => ({

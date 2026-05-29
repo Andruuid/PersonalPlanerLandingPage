@@ -11,10 +11,11 @@ const badgeClasses: Record<string, string> = {
 };
 
 const { pricing } = market.home;
+const { sectionIds } = market.ui;
 
 export function Pricing() {
   return (
-    <section id="preisgestaltung" className="scroll-mt-24 py-20 sm:py-28">
+    <section id={sectionIds.pricing} className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">

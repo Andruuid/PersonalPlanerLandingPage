@@ -31,6 +31,13 @@ export const chUi: UiContent = {
     menuOpen: "Menü öffnen",
     menuClose: "Menü schliessen",
   },
+  sectionIds: {
+    features: "funktionen",
+    workflow: "ablauf",
+    accounts: "zeitkonten",
+    pricing: "preisgestaltung",
+    faq: "faq",
+  },
   landingTemplate: {
     breadcrumbHome: "Startseite",
     relatedHeading: "Weiterlesen",

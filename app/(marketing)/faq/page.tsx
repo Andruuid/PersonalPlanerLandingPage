@@ -4,7 +4,7 @@ import { WaitlistLink } from "@/components/ui/waitlist-link";
 import { JsonLd } from "@/components/seo/json-ld";
 import { faqItems } from "@/lib/seo/faq-data";
 import { createPageMetadata } from "@/lib/seo/metadata";
-import { faqPageSchema } from "@/lib/seo/schema";
+import { breadcrumbSchema } from "@/lib/seo/schema";
 import { market } from "@/lib/markets";
 
 const f = market.ui.faqPage;
@@ -18,9 +18,14 @@ export const metadata = createPageMetadata({
 });
 
 export default function FaqPage() {
+  const breadcrumbs = [
+    { name: breadcrumbHome, path: "/" },
+    { name: f.breadcrumb, path: "/faq" },
+  ];
+
   return (
     <>
-      <JsonLd data={faqPageSchema()} />
+      <JsonLd data={breadcrumbSchema(breadcrumbs)} />
 
       <article className="mx-auto max-w-3xl px-4 py-28 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-8 text-sm text-slate-500">

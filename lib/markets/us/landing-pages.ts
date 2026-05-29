@@ -3,17 +3,18 @@ import type { LandingPageContent } from "@/lib/markets/types";
 export const usLandingPages: Record<string, LandingPageContent> = {
   "restaurant-employee-scheduling": {
     path: "/restaurant-employee-scheduling",
-    title: "Restaurant Employee Scheduling Software – Shift Scheduling for Restaurants",
+    title: "Restaurant Staff Scheduling Software – Shift Scheduling for Restaurants",
     description:
-      "Employee scheduling software for US restaurants: build weekly shift schedules, track hours and PTO, and stay ahead of overtime and Fair Workweek rules. Built for restaurants, cafés, and bars.",
+      "Restaurant staff scheduling software for US restaurants, cafés, and bars. Build weekly shifts, track hours and PTO, and support overtime and Fair Workweek workflows.",
     keywords: [
+      "restaurant staff scheduling software",
       "restaurant employee scheduling",
       "restaurant scheduling software",
       "shift scheduling for restaurants",
     ],
-    h1: "Restaurant employee scheduling — shift scheduling for restaurants and cafés",
+    h1: "Restaurant staff scheduling software for restaurants and cafés",
     intro:
-      "In restaurants, shifts change daily, time-off requests pile up before holidays, and overtime creeps in on busy weekends. EasyTeamPlan helps US restaurants, cafés, and bars build the schedule online — without spreadsheets or group chats.",
+      "In restaurants, shifts change daily, time-off requests pile up before holidays, and overtime creeps in on busy weekends. EasyTeamPlan helps US restaurants, cafés, and bars build staff schedules online — without spreadsheets or group chats.",
     sections: [
       {
         heading: "Common scheduling challenges in restaurants",
@@ -32,7 +33,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
       {
         heading: "Stay ahead of overtime and Fair Workweek rules",
         paragraphs: [
-          "Long service nights add up. EasyTeamPlan flags hours over 40 in a workweek (FLSA) and helps you post schedules in advance — important if you operate in a city with predictive scheduling (Fair Workweek) rules.",
+          "Long service nights add up. EasyTeamPlan flags hours over 40 in a workweek (FLSA) and helps you post schedules in advance — useful if you operate in a jurisdiction with predictive scheduling or Fair Workweek rules.",
         ],
       },
       {
@@ -43,6 +44,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
       },
     ],
     relatedLinks: [
+      { href: "/staff-scheduling-software", label: "Staff scheduling software" },
       { href: "/shift-scheduling-software", label: "Shift scheduling software" },
       { href: "/pto-time-off-tracking", label: "PTO & time-off tracking" },
       { href: "/pricing", label: "Pricing & plans" },
@@ -50,17 +52,18 @@ export const usLandingPages: Record<string, LandingPageContent> = {
   },
   "retail-employee-scheduling": {
     path: "/retail-employee-scheduling",
-    title: "Retail Employee Scheduling Software – Shift Scheduling for Stores",
+    title: "Retail Staff Scheduling Software – Shift Scheduling for Stores",
     description:
-      "Employee scheduling for US retail and boutiques. Shift schedules, hours, and PTO for stores and shops — simple and online, with overtime and Fair Workweek support.",
+      "Retail staff scheduling software for US stores and boutiques. Build shifts, manage availability, track hours and PTO, and support overtime and Fair Workweek workflows.",
     keywords: [
+      "retail staff scheduling software",
       "retail employee scheduling",
       "retail scheduling software",
       "employee scheduling for stores",
     ],
-    h1: "Retail employee scheduling — shift scheduling for stores, boutiques, and shops",
+    h1: "Retail staff scheduling software for stores, boutiques, and shops",
     intro:
-      "Small stores often run on part-time staff, changing hours, and time off during peak season. EasyTeamPlan is employee scheduling software for US retail — from the boutique to the specialty shop.",
+      "Small stores often run on part-time staff, changing hours, and time off during peak season. EasyTeamPlan is staff scheduling software for US retail — from the boutique to the specialty shop.",
     sections: [
       {
         heading: "Challenges in retail",
@@ -84,21 +87,69 @@ export const usLandingPages: Record<string, LandingPageContent> = {
       {
         heading: "Hours and overtime for small teams",
         paragraphs: [
-          "Even small teams rack up over- and under-hours. EasyTeamPlan keeps hours and PTO in one place — no separate spreadsheets — and flags overtime over 40 hours in a workweek.",
+          "Even small teams can lose track of scheduled vs. actual hours. EasyTeamPlan keeps hours and PTO in one place — no separate spreadsheets — and flags overtime over 40 hours in a workweek.",
         ],
       },
     ],
     relatedLinks: [
+      { href: "/staff-scheduling-software", label: "Staff scheduling software" },
       { href: "/employee-scheduling-app", label: "Employee scheduling app" },
       { href: "/excel-schedule-alternative", label: "Excel schedule alternative" },
       { href: "/pricing", label: "Transparent pricing" },
+    ],
+  },
+  "staff-scheduling-software": {
+    path: "/staff-scheduling-software",
+    title: "Staff Scheduling Software for Small Businesses",
+    description:
+      "Staff scheduling software for US small businesses. Build weekly schedules, manage availability and time-off requests, track hours and PTO, and reduce spreadsheet work.",
+    keywords: [
+      "staff scheduling software",
+      "small business staff scheduling",
+      "team scheduling software",
+      "employee scheduling software",
+    ],
+    h1: "Staff scheduling software for small business teams",
+    intro:
+      "EasyTeamPlan gives small businesses a simple way to plan staff schedules, publish shifts, manage requests, and keep hours visible — without rebuilding the week in Excel every time something changes.",
+    sections: [
+      {
+        heading: "Plan every shift in one place",
+        paragraphs: [
+          "Build the weekly schedule on a clear grid, use shift templates for repeat work, and see coverage before you publish. It works for restaurants, retail stores, salons, clinics, and local service teams.",
+          "When the schedule is ready, your team can see the current version on their phone. No screenshots, no outdated PDFs, and no wondering which spreadsheet is final.",
+        ],
+      },
+      {
+        heading: "Manage availability, time off, and swaps",
+        paragraphs: [
+          "Availability, PTO, and shift-swap requests belong next to the schedule. EasyTeamPlan keeps requests in context so managers can make faster, fairer decisions without searching through texts or email.",
+        ],
+      },
+      {
+        heading: "Track hours before payroll",
+        paragraphs: [
+          "Scheduled vs. actual hours, overtime flags, and PTO balances stay connected to the schedule. That gives owners and managers a cleaner handoff before payroll and fewer month-end corrections.",
+        ],
+      },
+      {
+        heading: "Built for small business scheduling",
+        paragraphs: [
+          "You do not need an enterprise HR suite to run a good schedule. EasyTeamPlan is designed for small teams that need practical staff scheduling, transparent hours, and simple pricing.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      { href: "/shift-scheduling-software", label: "Shift scheduling software" },
+      { href: "/employee-scheduling-app", label: "Employee scheduling app" },
+      { href: "/guides/how-to-make-a-work-schedule", label: "Guide: how to make a work schedule" },
     ],
   },
   "excel-schedule-alternative": {
     path: "/excel-schedule-alternative",
     title: "Excel Schedule Alternative – Employee Scheduling Without Spreadsheets",
     description:
-      "An Excel work-schedule alternative for US small businesses: shifts, hours, and PTO in one cloud app. No formulas, no version chaos — from $2.99 per employee.",
+      "An Excel work schedule alternative for US small businesses: staff schedules, hours, and PTO in one cloud app. No formulas, no version chaos.",
     keywords: [
       "excel schedule alternative",
       "employee scheduling without spreadsheets",
@@ -111,7 +162,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
       {
         heading: "Why Excel hits its limits for scheduling",
         paragraphs: [
-          "Spreadsheets are great for lists, not for live scheduling. Every change spawns a new version, employees can't see the schedule live, and time-off requests live outside the sheet. Mistakes with overtime and remaining PTO are almost guaranteed.",
+          "Spreadsheets are great for lists, not for live scheduling. Every change creates another version, employees cannot see the schedule live, and time-off requests live outside the sheet. Mistakes with overtime and remaining PTO become much easier to miss.",
         ],
       },
       {
@@ -134,6 +185,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
       },
     ],
     relatedLinks: [
+      { href: "/staff-scheduling-software", label: "Staff scheduling software" },
       { href: "/shift-scheduling-software", label: "Shift scheduling software" },
       { href: "/restaurant-employee-scheduling", label: "Restaurant scheduling" },
       { href: "/guides/how-to-make-a-work-schedule", label: "Guide: how to make a work schedule" },
@@ -143,7 +195,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
     path: "/shift-scheduling-software",
     title: "Shift Scheduling Software – Weekly Scheduling Online",
     description:
-      "Shift scheduling software for US small businesses: drag-and-drop weekly schedules, mobile employee view, hours, and PTO. Cloud scheduling from $2.99 per employee.",
+      "Shift scheduling software for US small businesses: drag-and-drop weekly schedules, mobile team view, hours, and PTO. Cloud scheduling from $2.99 per employee.",
     keywords: [
       "shift scheduling software",
       "weekly employee scheduling",
@@ -174,11 +226,12 @@ export const usLandingPages: Record<string, LandingPageContent> = {
       {
         heading: "Built-in hours and overtime",
         paragraphs: [
-          "Scheduling and hours belong together. After the week closes, balances post automatically — overtime, PTO, and time-in-lieu included.",
+          "Scheduling and hours belong together. After the week closes, balances post automatically — with overtime, PTO, and manual adjustments included.",
         ],
       },
     ],
     relatedLinks: [
+      { href: "/staff-scheduling-software", label: "Staff scheduling software" },
       { href: "/employee-scheduling-app", label: "Employee scheduling app" },
       { href: "/retail-employee-scheduling", label: "Retail scheduling" },
       { href: "/fair-workweek-scheduling-software", label: "Fair Workweek compliance" },
@@ -196,7 +249,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
     ],
     h1: "PTO & time-off tracking — requests, balances, and approvals",
     intro:
-      "Time off is part of scheduling. With EasyTeamPlan, employees submit requests digitally, see remaining PTO clearly, and you decide right in the schedule — fair and trackable.",
+      "Time off is part of scheduling. With EasyTeamPlan, employees submit requests digitally, see remaining PTO clearly, and managers decide right in the schedule — fair and trackable.",
     sections: [
       {
         heading: "Requests without the email chaos",
@@ -231,13 +284,14 @@ export const usLandingPages: Record<string, LandingPageContent> = {
   },
   "employee-scheduling-app": {
     path: "/employee-scheduling-app",
-    title: "Employee Scheduling App – Mobile Schedules for Teams",
+    title: "Employee Scheduling App – Mobile Team Scheduling",
     description:
-      "Employee scheduling app for US small businesses: schedules, time-off requests, and hours on the phone. Web app and mobile view for your team.",
+      "Employee scheduling app for US small businesses: team schedules, time-off requests, and hours on any phone. Web app and mobile view for your staff.",
     keywords: [
       "employee scheduling app",
       "shift scheduling app",
       "mobile employee scheduling",
+      "team scheduling app",
     ],
     h1: "Employee scheduling app — schedules and requests on the phone",
     intro:
@@ -258,7 +312,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
       {
         heading: "Transparent hours and PTO",
         paragraphs: [
-          "Hours balance, remaining PTO, and scheduled-vs-actual are visible to employees. Transparency builds trust and cuts down questions to owners and managers.",
+          "Scheduled vs. actual hours, remaining PTO, and weekly balances are visible to employees. Transparency builds trust and cuts down questions to owners and managers.",
         ],
       },
       {
@@ -278,7 +332,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
     path: "/fair-workweek-scheduling-software",
     title: "Fair Workweek Scheduling Software – Predictive Scheduling Compliance",
     description:
-      "Stay ahead of Fair Workweek and predictive scheduling laws: post schedules 14 days in advance, track changes and predictability pay, and keep audit-ready records. For US shift employers.",
+      "Fair Workweek scheduling software for US shift employers. Post schedules in advance, track changes and predictability pay, and keep audit-ready records.",
     keywords: [
       "Fair Workweek scheduling software",
       "predictive scheduling software",
@@ -286,13 +340,13 @@ export const usLandingPages: Record<string, LandingPageContent> = {
     ],
     h1: "Fair Workweek scheduling software — predictive scheduling compliance",
     intro:
-      "A growing number of US cities and states require employers to give shift workers advance notice of their schedules. EasyTeamPlan helps you post schedules early, track changes, and keep the records these laws expect.",
+      "A growing number of US jurisdictions require covered employers to give shift workers advance notice of their schedules. EasyTeamPlan helps you post schedules early, track changes, and keep the records these rules may require.",
     sections: [
       {
         heading: "What are Fair Workweek (predictive scheduling) laws?",
         paragraphs: [
-          "Predictive scheduling laws — often called Fair Workweek — require covered employers to give employees their schedules in advance (commonly 14 days), pay “predictability pay” for late changes, and avoid back-to-back “clopening” shifts without enough rest in between.",
-          "Oregon has a statewide law, and cities including New York City, Chicago, San Francisco, Los Angeles, Seattle, Philadelphia, Berkeley, Emeryville, and San Jose have their own ordinances. Rules and coverage thresholds vary by jurisdiction.",
+          "Predictive scheduling laws — often called Fair Workweek rules — can require covered employers to give employees their schedules in advance, pay “predictability pay” for late changes, and avoid back-to-back “clopening” shifts without enough rest in between.",
+          "Rules and coverage thresholds vary by jurisdiction, industry, employer size, and location. This page is general information, not legal advice — check the rules that apply in your city and state.",
         ],
       },
       {
@@ -311,7 +365,7 @@ export const usLandingPages: Record<string, LandingPageContent> = {
         heading: "Keep audit-ready records",
         paragraphs: [
           "Federal FLSA recordkeeping expects accurate hours and pay records (commonly retained for two to three years). EasyTeamPlan keeps schedules, edits, and hours in one place so you're ready if you're ever asked.",
-          "This page is general information, not legal advice — check the rules that apply in your city and state.",
+          "Because local predictive scheduling rules can change, audit-ready history matters: every published schedule, request, approval, and edit should be easy to find.",
         ],
       },
     ],

@@ -6,13 +6,10 @@ import { Hero } from "@/components/landing/hero";
 import { Pricing } from "@/components/landing/pricing";
 import { Problem } from "@/components/landing/problem";
 import { Workflow } from "@/components/landing/workflow";
-import { JsonLd } from "@/components/seo/json-ld";
-import { faqPageSchema } from "@/lib/seo/schema";
 
 export default function Home() {
   return (
     <>
-      <JsonLd data={faqPageSchema()} />
       <Hero />
       <Problem />
       <Features />

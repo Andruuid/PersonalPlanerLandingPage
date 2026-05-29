@@ -6,7 +6,7 @@ import { Pricing } from "@/components/landing/pricing";
 import { WaitlistLink } from "@/components/ui/waitlist-link";
 import { JsonLd } from "@/components/seo/json-ld";
 import { createPageMetadata } from "@/lib/seo/metadata";
-import { softwareApplicationSchema } from "@/lib/seo/schema";
+import { breadcrumbSchema } from "@/lib/seo/schema";
 import { market } from "@/lib/markets";
 
 /**
@@ -33,9 +33,14 @@ export function buildPricingPage(routePath: string) {
   function Page() {
     if (!active) notFound();
 
+    const breadcrumbs = [
+      { name: breadcrumbHome, path: "/" },
+      { name: content.breadcrumb, path: content.path },
+    ];
+
     return (
       <>
-        <JsonLd data={softwareApplicationSchema()} />
+        <JsonLd data={breadcrumbSchema(breadcrumbs)} />
 
         <div className="pt-16">
           <div className="mx-auto max-w-3xl px-4 pt-12 text-center sm:px-6 lg:px-8">

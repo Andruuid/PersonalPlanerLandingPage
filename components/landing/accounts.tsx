@@ -9,10 +9,11 @@ const accountStyles = [
 ];
 
 const { accounts } = market.home;
+const { sectionIds } = market.ui;
 
 export function Accounts() {
   return (
-    <section id="zeitkonten" className="scroll-mt-24 py-20 sm:py-28">
+    <section id={sectionIds.accounts} className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 p-8 text-white shadow-2xl shadow-slate-900/20 sm:p-12">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
