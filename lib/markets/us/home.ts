@@ -4,7 +4,7 @@ export const usHome: HomeContent = {
   hero: {
     badge: "Built for US small businesses",
     titleLead:
-      "Employee scheduling for US small businesses — shifts, time tracking and PTO",
+      "Employee scheduling for U.S. small businesses — shifts, time tracking and PTO",
     titleHighlight: "made simple",
     leadSuffix:
       "No more spreadsheet chaos or scattered group texts — just a clear flow from the weekly schedule to hours and time off.",
