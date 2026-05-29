@@ -17,25 +17,19 @@ Anleitung für Off-Page-SEO, Google Search Console und laufendes Monitoring.
    - `/faq`
    - `/preise`
 
-### Weitere Domains überwachen
+### Weitere Domains
 
-Nach Aktivierung der 301-Redirects in `vercel.json`:
+- `mitarbeiterplaner.ch` → 301 auf `www.easyplaner.ch` (Redirect in [`vercel.json`](vercel.json))
+- `mitarbeiterplaner.info` → **eigenes Vercel-Projekt** (Ratgeber), keine Verlinkung von easyplaner.ch
 
-- Domain-Property für `mitarbeiterplaner.ch` und `mitarbeiterplaner.info` anlegen
-- Prüfen, dass Redirects auf `www.easyplaner.ch` zeigen
+## 2. Domain-Konsolidierung (easyplaner.ch)
 
-## 2. Domain-Konsolidierung
-
-Alle Domains müssen auf dem Hosting-Provider auf dasselbe Vercel-Projekt zeigen:
-
-| Domain | DNS |
-|--------|-----|
-| `www.easyplaner.ch` | CNAME → Vercel |
-| `easyplaner.ch` | A/ALIAS → Vercel (Redirect via vercel.json) |
-| `mitarbeiterplaner.ch` | CNAME → Vercel |
-| `mitarbeiterplaner.info` | CNAME → Vercel |
-
-Redirects sind in [`vercel.json`](vercel.json) definiert.
+| Domain | DNS / Redirect |
+|--------|----------------|
+| `www.easyplaner.ch` | CNAME → Vercel (easyplaner-Projekt) |
+| `easyplaner.ch` | → `www.easyplaner.ch` (vercel.json) |
+| `mitarbeiterplaner.ch` | → `www.easyplaner.ch` (vercel.json) |
+| `mitarbeiterplaner.info` | Separates Projekt – **nicht** im easyplaner-Vercel-Projekt |
 
 ## 3. Umgebungsvariable
 

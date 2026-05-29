@@ -17,18 +17,6 @@
       "has": [{ "type": "host", "value": "www.mitarbeiterplaner.ch" }],
       "destination": "https://www.easyplaner.ch/:path*",
       "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "mitarbeiterplaner.info" }],
-      "destination": "https://www.easyplaner.ch/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.mitarbeiterplaner.info" }],
-      "destination": "https://www.easyplaner.ch/:path*",
-      "permanent": true
     }
   ]
 }
