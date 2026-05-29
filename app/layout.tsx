@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Inter, Nunito } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/seo/json-ld";
 import { homeMetadata } from "@/lib/seo/metadata";
 import { globalSchemas } from "@/lib/seo/schema";
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <JsonLd data={globalSchemas()} />
         {children}
+        <Analytics />
       </body>
     </html>
   );
