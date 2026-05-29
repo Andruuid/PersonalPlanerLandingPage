@@ -52,7 +52,7 @@ export const usHome: HomeContent = {
       "Why spreadsheets and group texts no longer cut it for scheduling",
     paragraphs: [
       "In a restaurant, retail shop, salon, or clinic, too much runs on guesswork: shifts in spreadsheets, time-off requests over text, overtime in a separate file. It costs hours, creates miscommunication, and makes payroll error-prone.",
-      "EasyTeamPlan brings scheduling, time off, and hours into one cloud app — built for teams of 5+ that don't need heavy HR software, just a schedule that works day to day.",
+      "EasyTeamPlan brings scheduling, time off, and hours into one cloud app — built for teams of 2+ that don't need heavy HR software, just a schedule that works day to day.",
     ],
     links: [
       { label: "See features", href: "/#funktionen" },

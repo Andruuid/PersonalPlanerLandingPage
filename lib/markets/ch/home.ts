@@ -52,7 +52,7 @@ export const chHome: HomeContent = {
       "Warum Excel und WhatsApp bei der Schichtplanung nicht mehr reichen",
     paragraphs: [
       "In einer Boutique, einem Uhrenshop, einem Restaurant oder einem Coiffeursalon läuft vieles über Zuruf: Schichten in Excel, Ferienwünsche per WhatsApp, Überstunden in einer separaten Tabelle. Das kostet Zeit, führt zu Missverständnissen und macht die Abrechnung fehleranfällig.",
-      "easyplan bringt Dienstplan, Ferienplanung und Zeitsaldo in eine Cloud-Lösung – entwickelt für Betriebe ab 5 Mitarbeitenden, die keine komplexe HR-Software brauchen, sondern einen Plan, der im Alltag funktioniert.",
+      "easyplan bringt Dienstplan, Ferienplanung und Zeitsaldo in eine Cloud-Lösung – entwickelt für Betriebe ab 2 Mitarbeitenden, die keine komplexe HR-Software brauchen, sondern einen Plan, der im Alltag funktioniert.",
     ],
     links: [
       { label: "Funktionen ansehen", href: "/#funktionen" },
