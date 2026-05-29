@@ -10,7 +10,7 @@ export function Problem() {
             Warum Excel und WhatsApp bei der Schichtplanung nicht mehr reichen
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-slate-600">
-            In einem Restaurant, einer Boutique, einem Uhrenshop oder einem
+            In einer Boutique, einem Uhrenshop, einem Restaurant oder einem
             Coiffeursalon läuft vieles über Zuruf: Schichten in Excel,
             Ferienwünsche per WhatsApp, Überstunden in einer separaten Tabelle.
             Das kostet Zeit, führt zu Missverständnissen und macht die Abrechnung

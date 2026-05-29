@@ -8,8 +8,8 @@ import { focusWaitlistEmail } from "@/lib/focus-waitlist";
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 const industries = [
-  "Gastronomie",
   "Detailhandel",
+  "Gastronomie",
   "Dienstleistung",
   "Coiffeur / Beauty",
   "Sonstiges",

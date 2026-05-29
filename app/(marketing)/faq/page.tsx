@@ -37,7 +37,7 @@ export default function FaqPage() {
         </h1>
         <p className="mt-4 text-lg text-slate-600">
           Alles Wichtige zu Dienstplan, Ferienplanung, Zeitsaldo und Kosten –
-          für Gastronomie, Detailhandel und Dienstleistung in der Schweiz.
+          für Detailhandel, Gastronomie und Dienstleistung in der Schweiz.
         </p>
 
         <div className="mt-12 space-y-8">

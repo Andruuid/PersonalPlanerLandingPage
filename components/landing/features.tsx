@@ -57,12 +57,12 @@ export function Features() {
             Funktionen
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Funktionen für Gastronomie, Detailhandel und Dienstleistung
+            Schichtplanung für Detailhandel, Gastronomie und Dienstleistung
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">
-            easyplan verbindet Schichtplanung, Mitarbeiterkommunikation und
-            Zeitkonten in einer Oberfläche – ohne Schulungswochen und ohne
-            IT-Abteilung.
+            Ob Boutique, Schmuckladen, Restaurant oder Coiffeursalon: easyplan
+            verbindet Schichtplanung, Mitarbeiterkommunikation und Zeitkonten in
+            einer Oberfläche – ohne Schulungswochen und ohne IT-Abteilung.
           </p>
         </div>
 

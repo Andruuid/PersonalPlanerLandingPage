@@ -12,7 +12,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Lohnt sich eine Dienstplan Software für kleine Unternehmen?",
     answer:
-      "Ja, ab etwa fünf Mitarbeitenden lohnt sich der Wechsel. Der Zeitaufwand für manuelle Planung steigt schnell, Fehler bei Ferien und Überstunden werden teurer als CHF 2.90 pro Person und Monat. Gerade in Gastronomie und Detailhandel mit wechselnden Schichten spart eine Cloud-Lösung spürbar Zeit.",
+      "Ja, ab etwa fünf Mitarbeitenden lohnt sich der Wechsel. Der Zeitaufwand für manuelle Planung steigt schnell, Fehler bei Ferien und Überstunden werden teurer als CHF 2.90 pro Person und Monat. Gerade im Detailhandel und in der Gastronomie mit wechselnden Schichten spart eine Cloud-Lösung spürbar Zeit.",
   },
   {
     question: "Kann easyplan Excel bei der Schichtplanung ersetzen?",
@@ -30,9 +30,9 @@ export const faqItems: FaqItem[] = [
       "easyplan startet ab CHF 2.90 pro Mitarbeiter und Monat (Starter). Das Plus-Paket mit erweiterter Zeitlogik und Audit-Log kostet CHF 3.90 pro Mitarbeiter und Monat. Beide Pakete sind monatlich kündbar – ohne versteckte Kosten.",
   },
   {
-    question: "Ist easyplan für Gastronomie und Detailhandel geeignet?",
+    question: "Ist easyplan für Detailhandel und Gastronomie geeignet?",
     answer:
-      "Ja. Die Software ist für Schweizer KMU mit Schichtbetrieb entwickelt – etwa Restaurants, Cafés, Boutiquen, Schmuck- und Uhrenläden oder Coiffeursalons. Dienstvorlagen, Wochenplanung und Ferienverwaltung lassen sich an kleine Teams anpassen.",
+      "Ja. Die Software ist für Schweizer KMU mit Schichtbetrieb entwickelt – etwa Boutiquen, Schmuck- und Uhrenläden, Restaurants, Cafés oder Coiffeursalons. Dienstvorlagen, Wochenplanung und Ferienverwaltung lassen sich an kleine Teams anpassen.",
   },
   {
     question: "Wie werden Zeitsaldo und Ferien in easyplan verwaltet?",
