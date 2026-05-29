@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { LandingPageTemplate } from "@/components/seo/landing-page-template";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { getLandingPage } from "@/lib/seo/pages/content";
 
 export function buildLandingPage(slug: string) {
-  const page = getLandingPage(slug);
+  function generateMetadata(): Metadata {
+    const page = getLandingPage(slug);
+    if (!page) return {};
 
-  if (!page) {
-    throw new Error(`Unknown landing page slug: ${slug}`);
+    return createPageMetadata({
+      title: page.title,
+      description: page.description,
+      path: page.path,
+      keywords: [...page.keywords],
+    });
   }
-
-  const resolvedPage = page;
-
-  const metadata: Metadata = createPageMetadata({
-    title: resolvedPage.title,
-    description: resolvedPage.description,
-    path: resolvedPage.path,
-    keywords: [...resolvedPage.keywords],
-  });
 
   function Page() {
-    return <LandingPageTemplate page={resolvedPage} />;
+    const page = getLandingPage(slug);
+    if (!page) notFound();
+
+    return <LandingPageTemplate page={page} />;
   }
 
-  return { metadata, Page };
+  return { generateMetadata, Page };
 }

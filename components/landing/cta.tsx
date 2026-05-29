@@ -1,5 +1,7 @@
-import { siteConfig } from "@/lib/site-config";
 import { WaitlistForm } from "@/components/landing/waitlist-form";
+import { market } from "@/lib/markets";
+
+const { cta } = market.home;
 
 export function Cta() {
   return (
@@ -13,14 +15,13 @@ export function Cta() {
           <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
             <div className="flex-1">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-200">
-                Early Access
+                {cta.eyebrow}
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Bereit für einfache Personalplanung ohne Excel?
+                {cta.heading}
               </h2>
               <p className="mt-4 max-w-lg text-base leading-relaxed text-brand-50/90">
-                Tragen Sie sich unverbindlich ein – wir informieren Sie, sobald
-                easyplan für Ihren Betrieb verfügbar ist.
+                {cta.intro}
               </p>
             </div>
 
@@ -28,7 +29,7 @@ export function Cta() {
               <WaitlistForm />
 
               <p className="mt-4 text-center text-xs leading-relaxed text-brand-100/75 lg:text-left">
-                Keine Kreditkarte nötig · Unverbindlich · Jederzeit abmeldbar
+                {cta.finePrint}
               </p>
             </div>
           </div>

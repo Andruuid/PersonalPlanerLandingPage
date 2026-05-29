@@ -1,0 +1,55 @@
+import type { MarketConfig } from "@/lib/markets/types";
+
+export const chConfig: MarketConfig = {
+  market: "CH",
+  name: "easyplan",
+  wordmark: { first: "easy", second: "plan" },
+  logoAriaLabel: "easyplan Startseite",
+  tagline: "Personalplanung & Zeitkonten für Schweizer KMU",
+  title: "Personalplanung Software Schweiz – Dienstplan & Ferien",
+  description:
+    "Schichtplan, Ferien und Zeitsaldo in einer App – ohne Excel. easyplan vereinfacht die Personalplanung für Schweizer KMU. Jetzt unverbindlich vormerken.",
+  leadDescription:
+    "Planen Sie Schichten per Drag-and-Drop, koordinieren Sie Ferien- und Absenzwünsche und behalten Sie Zeitsaldo und Überstunden im Blick – alles in einer modernen Cloud-App, die Ihr Team auch auf dem Smartphone nutzt.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.easyplaner.ch",
+  contactEmail: "hello@personalplaner.ch",
+  formspreeEndpoint: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "",
+  source: "easyplaner.ch",
+  locale: "de_CH",
+  htmlLang: "de-CH",
+  inLanguage: "de-CH",
+  areaServedCountry: "Switzerland",
+  currency: "CHF",
+  nav: [
+    { label: "Funktionen", href: "/#funktionen" },
+    { label: "Ablauf", href: "/#ablauf" },
+    { label: "Zeitkonten", href: "/#zeitkonten" },
+    { label: "Preisgestaltung", href: "/#preisgestaltung" },
+    { label: "FAQ", href: "/#faq" },
+  ],
+  footerNav: [
+    { label: "FAQ", href: "/faq" },
+    { label: "Preise", href: "/preise" },
+    { label: "Impressum", href: "/impressum" },
+    { label: "Datenschutz", href: "/datenschutz" },
+  ],
+  footerNote: "Entwickelt in der Schweiz",
+  keywords: [
+    "Personalplanung Software",
+    "Dienstplan Software",
+    "Schichtplan Software",
+    "Personalplanung Schweiz",
+    "Mitarbeiterplanung App",
+    "Zeitsaldo Software",
+    "Ferienplanung Mitarbeiter",
+    "Personalplanung KMU",
+    "Excel Dienstplan Alternative",
+    "Cloud Dienstplan",
+  ],
+  og: {
+    alt: "easyplan – Personalplanung Software für Schweizer KMU",
+    brand: "easyplan",
+    title: "Personalplanung Software für Schweizer KMU",
+    subtitle: "Dienstplan, Ferien und Zeitsaldo in einer App – ohne Excel",
+  },
+};

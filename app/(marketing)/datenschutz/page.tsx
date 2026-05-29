@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/site-config";
+import { MARKET } from "@/lib/market";
 
 export const metadata = createPageMetadata({
   title: "Datenschutz",
@@ -9,6 +11,8 @@ export const metadata = createPageMetadata({
 });
 
 export default function DatenschutzPage() {
+  if (MARKET !== "CH") notFound();
+
   return (
     <article className="mx-auto max-w-3xl px-4 py-28 sm:px-6 lg:px-8">
       <nav aria-label="Breadcrumb" className="mb-8 text-sm text-slate-500">

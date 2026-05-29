@@ -3,19 +3,12 @@
 import { ArrowRight, CheckCircle2, Loader2, Mail } from "lucide-react";
 import { FormEvent, useEffect, useState } from "react";
 import { siteConfig } from "@/lib/site-config";
+import { market } from "@/lib/markets";
 import { focusWaitlistEmail } from "@/lib/focus-waitlist";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-const industries = [
-  "Detailhandel",
-  "Gastronomie",
-  "Dienstleistung",
-  "Coiffeur / Beauty",
-  "Sonstiges",
-];
-
-const teamSizes = ["1–5", "6–10", "11–20", "21–50", "50+"];
+const w = market.ui.waitlist;
 
 export function WaitlistForm() {
   const [email, setEmail] = useState("");
@@ -44,7 +37,7 @@ export function WaitlistForm() {
 
     if (!email.includes("@")) {
       setStatus("error");
-      setError("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
+      setError(w.errorInvalidEmail);
       return;
     }
 
@@ -79,7 +72,7 @@ export function WaitlistForm() {
 
       if (!response.ok) {
         setStatus("error");
-        setError(`Senden fehlgeschlagen (${response.status}). Bitte erneut versuchen.`);
+        setError(w.errorSendFailed.replace("{status}", String(response.status)));
         return;
       }
 
@@ -89,7 +82,7 @@ export function WaitlistForm() {
       setStatus("success");
     } catch {
       setStatus("error");
-      setError("Netzwerkfehler. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut.");
+      setError(w.errorNetwork);
     }
   }
 
@@ -105,12 +98,8 @@ export function WaitlistForm() {
           className="mx-auto h-10 w-10 text-brand-100"
           aria-hidden="true"
         />
-        <p className="mt-4 text-base font-semibold text-white">
-          Danke! Wir melden uns bald bei Ihnen.
-        </p>
-        <p className="mt-2 text-sm text-brand-100/90">
-          Sie sind auf der Warteliste eingetragen.
-        </p>
+        <p className="mt-4 text-base font-semibold text-white">{w.successTitle}</p>
+        <p className="mt-2 text-sm text-brand-100/90">{w.successSubtitle}</p>
       </div>
     );
   }
@@ -120,7 +109,7 @@ export function WaitlistForm() {
       <form onSubmit={handleSubmit} className="scroll-mt-28 space-y-3">
         <div className="relative min-w-0">
           <label htmlFor="waitlist-email" className="sr-only">
-            E-Mail
+            {w.emailLabel}
           </label>
           <Mail
             className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-brand-600"
@@ -141,7 +130,7 @@ export function WaitlistForm() {
               }
             }}
             disabled={isLoading}
-            placeholder="ihre@email.ch"
+            placeholder={w.emailPlaceholder}
             className="w-full scroll-mt-28 rounded-xl border-0 bg-white py-3.5 pl-12 pr-4 text-sm font-medium text-slate-900 shadow-lg shadow-black/10 outline-none placeholder:font-normal placeholder:text-slate-400 focus:ring-2 focus:ring-white/40 disabled:opacity-60"
           />
         </div>
@@ -149,7 +138,7 @@ export function WaitlistForm() {
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
             <label htmlFor="waitlist-industry" className="sr-only">
-              Branche
+              {w.industryLabel}
             </label>
             <select
               id="waitlist-industry"
@@ -159,8 +148,8 @@ export function WaitlistForm() {
               disabled={isLoading}
               className="w-full rounded-xl border-0 bg-white/95 px-4 py-3 text-sm text-slate-900 shadow-lg shadow-black/10 outline-none focus:ring-2 focus:ring-white/40 disabled:opacity-60"
             >
-              <option value="">Branche (optional)</option>
-              {industries.map((value) => (
+              <option value="">{w.industryPlaceholder}</option>
+              {w.industries.map((value) => (
                 <option key={value} value={value}>
                   {value}
                 </option>
@@ -169,7 +158,7 @@ export function WaitlistForm() {
           </div>
           <div>
             <label htmlFor="waitlist-team-size" className="sr-only">
-              Teamgrösse
+              {w.teamSizeLabel}
             </label>
             <select
               id="waitlist-team-size"
@@ -179,10 +168,10 @@ export function WaitlistForm() {
               disabled={isLoading}
               className="w-full rounded-xl border-0 bg-white/95 px-4 py-3 text-sm text-slate-900 shadow-lg shadow-black/10 outline-none focus:ring-2 focus:ring-white/40 disabled:opacity-60"
             >
-              <option value="">Teamgrösse (optional)</option>
-              {teamSizes.map((value) => (
+              <option value="">{w.teamSizePlaceholder}</option>
+              {w.teamSizes.map((value) => (
                 <option key={value} value={value}>
-                  {value} Mitarbeitende
+                  {value} {w.teamSizeSuffix}
                 </option>
               ))}
             </select>
@@ -197,11 +186,11 @@ export function WaitlistForm() {
           {isLoading ? (
             <>
               <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-              Wird gesendet …
+              {w.submitting}
             </>
           ) : (
             <>
-              Kostenlos vormerken
+              {w.submit}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </>
           )}

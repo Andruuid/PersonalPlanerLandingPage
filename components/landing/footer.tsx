@@ -15,7 +15,7 @@ export function Footer() {
               <LogoWordmark size="sm" />
               <p className="mt-0.5 text-sm text-slate-500">{siteConfig.tagline}</p>
               <p className="mt-2 text-sm font-medium text-brand-700">
-                Entwickelt in der Schweiz
+                {siteConfig.footerNote}
               </p>
             </div>
           </div>

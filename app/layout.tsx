@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="de-CH"
+      lang={siteConfig.htmlLang}
       className={`${inter.variable} ${geistMono.variable} ${nunito.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">

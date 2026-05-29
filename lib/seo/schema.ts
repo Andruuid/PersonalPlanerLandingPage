@@ -1,6 +1,7 @@
 import { faqItems } from "@/lib/seo/faq-data";
 import { pricingPlans } from "@/lib/seo/pricing-data";
 import { siteConfig } from "@/lib/site-config";
+import { market } from "@/lib/markets";
 
 type JsonLd = Record<string, unknown>;
 
@@ -14,7 +15,7 @@ export function organizationSchema(): JsonLd {
     description: siteConfig.description,
     areaServed: {
       "@type": "Country",
-      name: "Switzerland",
+      name: siteConfig.areaServedCountry,
     },
   };
 }
@@ -26,7 +27,7 @@ export function websiteSchema(): JsonLd {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    inLanguage: "de-CH",
+    inLanguage: siteConfig.inLanguage,
   };
 }
 
@@ -45,11 +46,11 @@ export function softwareApplicationSchema(): JsonLd {
       price: plan.price,
       priceCurrency: plan.priceCurrency,
       description: plan.description,
-      url: `${siteConfig.url}/preise`,
+      url: `${siteConfig.url}${market.ui.pricingPage.path}`,
     })),
     areaServed: {
       "@type": "Country",
-      name: "Switzerland",
+      name: siteConfig.areaServedCountry,
     },
   };
 }

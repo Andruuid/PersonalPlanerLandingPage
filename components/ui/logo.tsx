@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 export const logoColors = {
@@ -105,8 +106,8 @@ export function LogoWordmark({ className, size = "md" }: LogoWordmarkProps) {
         className,
       )}
     >
-      <span style={{ color: logoColors.teal }}>easy</span>
-      <span style={{ color: logoColors.navy }}>plan</span>
+      <span style={{ color: logoColors.teal }}>{siteConfig.wordmark.first}</span>
+      <span style={{ color: logoColors.navy }}>{siteConfig.wordmark.second}</span>
     </span>
   );
 }
@@ -135,7 +136,7 @@ export function LogoLink({
     <Link
       href="/"
       className={cn("inline-flex shrink-0 items-center", className)}
-      aria-label="easyplan Startseite"
+      aria-label={siteConfig.logoAriaLabel}
     >
       <Logo iconSize={iconSize} wordmarkSize={wordmarkSize} />
     </Link>

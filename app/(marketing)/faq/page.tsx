@@ -5,17 +5,16 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { faqItems } from "@/lib/seo/faq-data";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { faqPageSchema } from "@/lib/seo/schema";
+import { market } from "@/lib/markets";
+
+const f = market.ui.faqPage;
+const { breadcrumbHome } = market.ui.landingTemplate;
 
 export const metadata = createPageMetadata({
-  title: "FAQ – Personalplanung Software für Schweizer KMU",
-  description:
-    "Antworten zu Dienstplan Software, Ferienplanung, Kosten und Mitarbeiter-App – häufige Fragen zu easyplan für Schweizer KMU.",
+  title: f.metaTitle,
+  description: f.metaDescription,
   path: "/faq",
-  keywords: [
-    "Personalplanung Software FAQ",
-    "Dienstplan Software Schweiz",
-    "Mitarbeiterplanung Fragen",
-  ],
+  keywords: f.metaKeywords,
 });
 
 export default function FaqPage() {
@@ -26,19 +25,16 @@ export default function FaqPage() {
       <article className="mx-auto max-w-3xl px-4 py-28 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-8 text-sm text-slate-500">
           <Link href="/" className="hover:text-slate-900">
-            Startseite
+            {breadcrumbHome}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-slate-700">FAQ</span>
+          <span className="text-slate-700">{f.breadcrumb}</span>
         </nav>
 
         <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-          Häufige Fragen zur Personalplanung Software
+          {f.h1}
         </h1>
-        <p className="mt-4 text-lg text-slate-600">
-          Alles Wichtige zu Dienstplan, Ferienplanung, Zeitsaldo und Kosten –
-          für Detailhandel, Gastronomie und Dienstleistung in der Schweiz.
-        </p>
+        <p className="mt-4 text-lg text-slate-600">{f.intro}</p>
 
         <div className="mt-12 space-y-8">
           {faqItems.map((item) => (
@@ -50,12 +46,10 @@ export default function FaqPage() {
         </div>
 
         <div className="mt-12 rounded-2xl border border-brand-200 bg-brand-50 p-6">
-          <p className="font-semibold text-slate-900">Noch Fragen?</p>
-          <p className="mt-2 text-slate-600">
-            Tragen Sie sich unverbindlich ein – wir melden uns bei Ihnen.
-          </p>
+          <p className="font-semibold text-slate-900">{f.ctaTitle}</p>
+          <p className="mt-2 text-slate-600">{f.ctaText}</p>
           <WaitlistLink className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800">
-            Kostenlos vormerken
+            {f.ctaButton}
             <ArrowRight className="h-4 w-4" />
           </WaitlistLink>
         </div>

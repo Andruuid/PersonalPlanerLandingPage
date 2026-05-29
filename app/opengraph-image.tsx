@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
+import { siteConfig } from "@/lib/site-config";
 
-export const alt = "easyplan – Personalplanung Software für Schweizer KMU";
+export const alt = siteConfig.og.alt;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -28,7 +29,7 @@ export default function OpenGraphImage() {
             marginBottom: 16,
           }}
         >
-          easyplan
+          {siteConfig.og.brand}
         </div>
         <div
           style={{
@@ -38,7 +39,7 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          Personalplanung Software für Schweizer KMU
+          {siteConfig.og.title}
         </div>
         <div
           style={{
@@ -49,7 +50,7 @@ export default function OpenGraphImage() {
             lineHeight: 1.4,
           }}
         >
-          Dienstplan, Ferien und Zeitsaldo in einer App – ohne Excel
+          {siteConfig.og.subtitle}
         </div>
       </div>
     ),

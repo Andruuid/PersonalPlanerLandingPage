@@ -1,6 +1,6 @@
 import { buildLandingPage } from "@/lib/seo/pages/create-landing-page";
 
-const { metadata, Page } = buildLandingPage("personalplanung-detailhandel");
+const { generateMetadata, Page } = buildLandingPage("personalplanung-detailhandel");
 
-export { metadata };
+export { generateMetadata };
 export default Page;

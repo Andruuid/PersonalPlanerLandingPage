@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { WaitlistLink } from "@/components/ui/waitlist-link";
 import { JsonLd } from "@/components/seo/json-ld";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { breadcrumbSchema } from "@/lib/seo/schema";
+import { MARKET } from "@/lib/market";
 
 export const metadata = createPageMetadata({
   title: "Dienstplan erstellen – Anleitung für KMU",
@@ -23,6 +25,8 @@ const breadcrumbs = [
 ];
 
 export default function DienstplanErstellenArticle() {
+  if (MARKET !== "CH") notFound();
+
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />

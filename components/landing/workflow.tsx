@@ -1,43 +1,7 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { market } from "@/lib/markets";
 
-const steps = [
-  {
-    number: "01",
-    title: "Stammdaten erfassen",
-    description:
-      "Mitarbeitende, Pensum, Standorte und Dienstvorlagen einmal anlegen – die Basis für jede Woche.",
-  },
-  {
-    number: "02",
-    title: "Woche planen und veröffentlichen",
-    description:
-      "Schichten im Drag-and-Drop-Raster zuweisen, Besetzung prüfen und den Plan fürs Team freigeben.",
-  },
-  {
-    number: "03",
-    title: "Wünsche bearbeiten",
-    description:
-      "Ferien- und Absenzanträge landen direkt im Planungsboard. Sie entscheiden im Kontext – ohne Medienbruch.",
-  },
-  {
-    number: "04",
-    title: "Zeitkonten aktualisieren",
-    description:
-      "Nach Wochenabschluss werden Salden automatisch gebucht. Korrekturen bleiben revisionssicher nachvollziehbar.",
-  },
-];
-
-const adminBenefits = [
-  "Weniger manuelle Nacharbeit",
-  "Klare Wochenstatus & Verantwortlichkeiten",
-  "Volle Historie aller Änderungen",
-];
-
-const employeeBenefits = [
-  "Schichtplan jederzeit auf dem Smartphone",
-  "Absenzen & Wünsche mobil melden",
-  "Transparente Kontostände",
-];
+const { workflow } = market.home;
 
 export function Workflow() {
   return (
@@ -46,24 +10,26 @@ export function Workflow() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">
-              Ablauf
+              {workflow.eyebrow}
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              So funktioniert die Mitarbeiterplanung in vier Schritten
+              {workflow.heading}
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
-              easyplan spiegelt den echten Betriebsalltag: Planen, kommunizieren,
-              entscheiden – und am Ende sauber abrechnen.
+              {workflow.intro}
             </p>
 
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
-              <BenefitCard title="Für Admins" items={adminBenefits} />
-              <BenefitCard title="Für Mitarbeitende" items={employeeBenefits} />
+              <BenefitCard title={workflow.adminTitle} items={workflow.adminBenefits} />
+              <BenefitCard
+                title={workflow.employeeTitle}
+                items={workflow.employeeBenefits}
+              />
             </div>
           </div>
 
           <ol className="space-y-4">
-            {steps.map((step) => (
+            {workflow.steps.map((step) => (
               <li
                 key={step.number}
                 className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-6 transition-all hover:border-brand-200 hover:bg-white hover:shadow-lg hover:shadow-brand-600/5"

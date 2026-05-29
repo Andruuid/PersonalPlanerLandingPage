@@ -1,32 +1,14 @@
 import { BadgeCheck, PiggyBank, Scale, Timer } from "lucide-react";
+import { market } from "@/lib/markets";
 
-const accounts = [
-  {
-    icon: Timer,
-    name: "Zeitsaldo",
-    description: "Über- und Unterstunden transparent nach Soll/Ist pro Woche.",
-    tone: "from-brand-500/15 to-brand-500/5 text-brand-800",
-  },
-  {
-    icon: PiggyBank,
-    name: "Ferien",
-    description: "Ferienanspruch, Bezüge und Resttage immer nachvollziehbar.",
-    tone: "from-sky-500/15 to-sky-500/5 text-sky-900",
-  },
-  {
-    icon: Scale,
-    name: "UEZ & TZT",
-    description:
-      "Überstunden und Zeitausgleich nach Schweizer Praxis abbilden.",
-    tone: "from-violet-500/15 to-violet-500/5 text-violet-900",
-  },
-  {
-    icon: BadgeCheck,
-    name: "Audit-Log",
-    description: "Jede Buchung und jede Planänderung bleibt revisionssicher.",
-    tone: "from-amber-500/15 to-amber-500/5 text-amber-900",
-  },
+const accountStyles = [
+  { icon: Timer, tone: "from-brand-500/15 to-brand-500/5 text-brand-800" },
+  { icon: PiggyBank, tone: "from-sky-500/15 to-sky-500/5 text-sky-900" },
+  { icon: Scale, tone: "from-violet-500/15 to-violet-500/5 text-violet-900" },
+  { icon: BadgeCheck, tone: "from-amber-500/15 to-amber-500/5 text-amber-900" },
 ];
+
+const { accounts } = market.home;
 
 export function Accounts() {
   return (
@@ -36,33 +18,35 @@ export function Accounts() {
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-300">
-                Zeitkonten
+                {accounts.eyebrow}
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Zeitsaldo und Ferienplanung ohne Excel-Tabellen
+                {accounts.heading}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-300">
-                Statt verstreuter Tabellen führt easyplan Zeitsaldo, Ferien,
-                Überstunden und Zeitausgleich zentral – mit automatischen
-                Wochenbuchungen und vollständiger Änderungshistorie.
+                {accounts.intro}
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              {accounts.map((account) => (
-                <article
-                  key={account.name}
-                  className={`rounded-2xl border border-white/10 bg-gradient-to-br ${account.tone} p-5 backdrop-blur-sm`}
-                >
-                  <account.icon className="h-5 w-5" />
-                  <h3 className="mt-4 text-lg font-semibold text-white">
-                    {account.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-200">
-                    {account.description}
-                  </p>
-                </article>
-              ))}
+              {accounts.items.map((account, index) => {
+                const style = accountStyles[index] ?? accountStyles[0];
+                const Icon = style.icon;
+                return (
+                  <article
+                    key={account.name}
+                    className={`rounded-2xl border border-white/10 bg-gradient-to-br ${style.tone} p-5 backdrop-blur-sm`}
+                  >
+                    <Icon className="h-5 w-5" />
+                    <h3 className="mt-4 text-lg font-semibold text-white">
+                      {account.name}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-200">
+                      {account.description}
+                    </p>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </div>

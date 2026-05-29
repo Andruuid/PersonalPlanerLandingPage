@@ -3,15 +3,18 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/seo/json-ld";
 import { breadcrumbSchema } from "@/lib/seo/schema";
+import { market } from "@/lib/markets";
 import type { LandingPageContent } from "@/lib/seo/pages/content";
 
 type LandingPageTemplateProps = {
   page: LandingPageContent;
 };
 
+const { landingTemplate } = market.ui;
+
 export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
   const breadcrumbs = [
-    { name: "Startseite", path: "/" },
+    { name: landingTemplate.breadcrumbHome, path: "/" },
     { name: page.h1.split("–")[0]?.trim() ?? page.title, path: page.path },
   ];
 
@@ -24,7 +27,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
           <ol className="flex flex-wrap items-center gap-2">
             <li>
               <Link href="/" className="hover:text-slate-900">
-                Startseite
+                {landingTemplate.breadcrumbHome}
               </Link>
             </li>
             <li aria-hidden="true">/</li>
@@ -58,14 +61,11 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
 
         <div className="mt-12 rounded-2xl border border-brand-200 bg-brand-50 p-6 sm:p-8">
           <h2 className="text-xl font-semibold text-slate-900">
-            Bereit für einfache Personalplanung?
+            {landingTemplate.ctaHeading}
           </h2>
-          <p className="mt-2 text-slate-600">
-            Tragen Sie sich unverbindlich ein – wir informieren Sie, sobald easyplan
-            für Ihren Betrieb verfügbar ist.
-          </p>
+          <p className="mt-2 text-slate-600">{landingTemplate.ctaText}</p>
           <Button href="/#waitlist-email" className="mt-5" size="lg">
-            Kostenlos vormerken
+            {landingTemplate.ctaButton}
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
@@ -73,7 +73,7 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
         {page.relatedLinks.length > 0 ? (
           <aside className="mt-12 border-t border-slate-200 pt-8">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-              Weiterlesen
+              {landingTemplate.relatedHeading}
             </h2>
             <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
               {page.relatedLinks.map((link) => (

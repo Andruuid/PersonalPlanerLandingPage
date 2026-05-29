@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { faqItems } from "@/lib/seo/faq-data";
+import { market } from "@/lib/markets";
+
+const { faq } = market.home;
 
 export function Faq() {
   return (
@@ -7,14 +10,12 @@ export function Faq() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">
-            FAQ
+            {faq.eyebrow}
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Häufige Fragen zur Personalplanung Software
+            {faq.heading}
           </h2>
-          <p className="mt-4 text-lg text-slate-600">
-            Antworten zu Dienstplan, Ferienplanung und Kosten – für Schweizer KMU.
-          </p>
+          <p className="mt-4 text-lg text-slate-600">{faq.intro}</p>
         </div>
 
         <div className="mt-12 space-y-3">
@@ -35,11 +36,11 @@ export function Faq() {
         </div>
 
         <p className="mt-8 text-center text-sm text-slate-500">
-          Weitere Antworten finden Sie auf der{" "}
+          {faq.footerLeading}
           <Link href="/faq" className="font-medium text-brand-700 hover:text-brand-800">
-            FAQ-Seite
+            {faq.footerLinkLabel}
           </Link>
-          .
+          {faq.footerTrailing}
         </p>
       </div>
     </section>

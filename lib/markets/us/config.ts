@@ -1,0 +1,55 @@
+import type { MarketConfig } from "@/lib/markets/types";
+
+export const usConfig: MarketConfig = {
+  market: "US",
+  name: "EasyTeamPlan",
+  wordmark: { first: "easy", second: "teamplan" },
+  logoAriaLabel: "EasyTeamPlan Home",
+  tagline: "Employee scheduling & time tracking for US small businesses",
+  title: "Employee Scheduling Software for US Small Businesses",
+  description:
+    "Build shift schedules, track hours and PTO, and stay ahead of overtime and Fair Workweek rules — all in one app. EasyTeamPlan replaces spreadsheets for US small businesses. Join the waitlist.",
+  leadDescription:
+    "Build shift schedules with drag-and-drop, manage time-off and availability requests, and keep overtime and hours in check — all in one modern cloud app your team can use right from their phone.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.easyteamplan.com",
+  contactEmail: "hello@easyteamplan.com",
+  formspreeEndpoint: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "",
+  source: "easyteamplan.com",
+  locale: "en_US",
+  htmlLang: "en-US",
+  inLanguage: "en-US",
+  areaServedCountry: "United States",
+  currency: "USD",
+  nav: [
+    { label: "Features", href: "/#funktionen" },
+    { label: "How it works", href: "/#ablauf" },
+    { label: "Time tracking", href: "/#zeitkonten" },
+    { label: "Pricing", href: "/#preisgestaltung" },
+    { label: "FAQ", href: "/#faq" },
+  ],
+  footerNav: [
+    { label: "FAQ", href: "/faq" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms", href: "/terms" },
+  ],
+  footerNote: "Built for US teams",
+  keywords: [
+    "employee scheduling software",
+    "shift scheduling software",
+    "work schedule maker",
+    "employee scheduling app",
+    "time tracking software",
+    "PTO tracking",
+    "restaurant employee scheduling",
+    "retail employee scheduling",
+    "Fair Workweek compliance software",
+    "predictive scheduling software",
+  ],
+  og: {
+    alt: "EasyTeamPlan – Employee scheduling software for US small businesses",
+    brand: "EasyTeamPlan",
+    title: "Employee scheduling software for US small businesses",
+    subtitle: "Scheduling, time tracking and PTO in one app — built for US labor rules",
+  },
+};

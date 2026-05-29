@@ -6,7 +6,10 @@ import { Menu, X } from "lucide-react";
 import { LogoLink } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
+import { market } from "@/lib/markets";
 import { cn } from "@/lib/utils";
+
+const { header } = market.ui;
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -45,14 +48,14 @@ export function Header() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Button href="#waitlist-email" size="sm" onClick={() => setOpen(false)}>
-            Demo anfragen
+            {header.ctaButton}
           </Button>
         </div>
 
         <button
           type="button"
           className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 md:hidden"
-          aria-label={open ? "Menü schliessen" : "Menü öffnen"}
+          aria-label={open ? header.menuClose : header.menuOpen}
           onClick={() => setOpen((value) => !value)}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -78,7 +81,7 @@ export function Header() {
                 className="w-full justify-center"
                 onClick={() => setOpen(false)}
               >
-                Demo anfragen
+                {header.ctaButton}
               </Button>
             </div>
           </nav>
