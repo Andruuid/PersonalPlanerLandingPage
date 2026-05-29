@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Loader2, Mail } from "lucide-react";
+import { ArrowRight, CheckCircle2, Loader2, Mail } from "lucide-react";
 import { FormEvent, useEffect, useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 import { focusWaitlistEmail } from "@/lib/focus-waitlist";
@@ -95,6 +95,26 @@ export function WaitlistForm() {
 
   const isLoading = status === "loading";
 
+  if (status === "success") {
+    return (
+      <div
+        role="status"
+        className="scroll-mt-28 rounded-xl bg-white/10 px-6 py-8 text-center backdrop-blur-sm"
+      >
+        <CheckCircle2
+          className="mx-auto h-10 w-10 text-brand-100"
+          aria-hidden="true"
+        />
+        <p className="mt-4 text-base font-semibold text-white">
+          Danke! Wir melden uns bald bei Ihnen.
+        </p>
+        <p className="mt-2 text-sm text-brand-100/90">
+          Sie sind auf der Warteliste eingetragen.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit} className="scroll-mt-28 space-y-3">
@@ -120,7 +140,7 @@ export function WaitlistForm() {
                 setError("");
               }
             }}
-            disabled={isLoading || status === "success"}
+            disabled={isLoading}
             placeholder="ihre@email.ch"
             className="w-full rounded-xl border-0 bg-white py-3.5 pl-12 pr-4 text-sm font-medium text-slate-900 shadow-lg shadow-black/10 outline-none placeholder:font-normal placeholder:text-slate-400 focus:ring-2 focus:ring-white/40 disabled:opacity-60"
           />
@@ -136,7 +156,7 @@ export function WaitlistForm() {
               name="industry"
               value={industry}
               onChange={(event) => setIndustry(event.target.value)}
-              disabled={isLoading || status === "success"}
+              disabled={isLoading}
               className="w-full rounded-xl border-0 bg-white/95 px-4 py-3 text-sm text-slate-900 shadow-lg shadow-black/10 outline-none focus:ring-2 focus:ring-white/40 disabled:opacity-60"
             >
               <option value="">Branche (optional)</option>
@@ -156,7 +176,7 @@ export function WaitlistForm() {
               name="teamSize"
               value={teamSize}
               onChange={(event) => setTeamSize(event.target.value)}
-              disabled={isLoading || status === "success"}
+              disabled={isLoading}
               className="w-full rounded-xl border-0 bg-white/95 px-4 py-3 text-sm text-slate-900 shadow-lg shadow-black/10 outline-none focus:ring-2 focus:ring-white/40 disabled:opacity-60"
             >
               <option value="">Teamgrösse (optional)</option>
@@ -171,11 +191,14 @@ export function WaitlistForm() {
 
         <button
           type="submit"
-          disabled={isLoading || status === "success"}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-50 px-6 py-3.5 text-sm font-semibold text-brand-800 shadow-lg shadow-black/10 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-50"
+          disabled={isLoading}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-50 px-6 py-3.5 text-sm font-semibold text-brand-800 shadow-lg shadow-black/10 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isLoading ? (
-            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+            <>
+              <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+              Wird gesendet …
+            </>
           ) : (
             <>
               Kostenlos vormerken
@@ -185,14 +208,11 @@ export function WaitlistForm() {
         </button>
       </form>
 
-      <div aria-live="polite" className="mt-3 min-h-5 text-sm">
-        {status === "success" ? (
-          <p className="text-brand-100">Danke! Wir melden uns bald bei Ihnen.</p>
-        ) : null}
-        {status === "error" && error ? (
+      {status === "error" && error ? (
+        <div aria-live="polite" className="mt-3 text-sm">
           <p className="text-red-200">{error}</p>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </div>
   );
 }
