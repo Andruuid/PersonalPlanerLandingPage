@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LogoIcon, LogoWordmark } from "@/components/ui/logo";
+import { market } from "@/lib/markets";
 import { siteConfig } from "@/lib/site-config";
 
 export function Footer() {
@@ -34,9 +35,10 @@ export function Footer() {
           </nav>
 
           <div className="text-sm text-slate-500">
+            <p className="font-medium text-slate-700">{market.ui.footer.contactLabel}</p>
             <a
               href={`mailto:${siteConfig.contactEmail}`}
-              className="font-medium text-slate-700 hover:text-slate-900"
+              className="mt-1 inline-block hover:text-slate-900"
             >
               {siteConfig.contactEmail}
             </a>

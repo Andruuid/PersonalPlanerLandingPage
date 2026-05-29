@@ -31,6 +31,9 @@ export const chUi: UiContent = {
     menuOpen: "Menü öffnen",
     menuClose: "Menü schliessen",
   },
+  footer: {
+    contactLabel: "Kontakt",
+  },
   sectionIds: {
     features: "funktionen",
     workflow: "ablauf",

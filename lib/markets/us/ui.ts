@@ -32,6 +32,9 @@ export const usUi: UiContent = {
     menuOpen: "Open menu",
     menuClose: "Close menu",
   },
+  footer: {
+    contactLabel: "Contact",
+  },
   sectionIds: {
     features: "features",
     workflow: "how-it-works",

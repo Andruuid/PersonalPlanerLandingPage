@@ -169,6 +169,10 @@ export type HeaderContent = {
   menuClose: string;
 };
 
+export type FooterContent = {
+  contactLabel: string;
+};
+
 export type SectionIdsContent = {
   features: string;
   workflow: string;
@@ -211,6 +215,7 @@ export type PricingPageContent = {
 export type UiContent = {
   waitlist: WaitlistFormContent;
   header: HeaderContent;
+  footer: FooterContent;
   sectionIds: SectionIdsContent;
   landingTemplate: LandingTemplateContent;
   faqPage: FaqPageContent;
