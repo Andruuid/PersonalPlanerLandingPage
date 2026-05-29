@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import { CalendarDays, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { LogoLink } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 import { focusWaitlistEmail } from "@/lib/focus-waitlist";
@@ -35,14 +35,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white shadow-lg shadow-brand-600/30">
-            <CalendarDays className="h-5 w-5" strokeWidth={2.2} />
-          </span>
-          <span className="text-lg font-semibold tracking-tight text-slate-900">
-            {siteConfig.name}
-          </span>
-        </Link>
+        <LogoLink height={34} />
 
         <nav className="hidden items-center gap-8 md:flex">
           {siteConfig.nav.map((item) => (

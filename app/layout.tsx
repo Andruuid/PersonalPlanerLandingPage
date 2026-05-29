@@ -35,6 +35,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_CH",
   },
+  icons: {
+    icon: "/easyplan-logo.png",
+    apple: "/easyplan-logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "PersonalPlaner",
+  name: "easyplan",
   tagline: "Personalplanung & Zeitkonten für Schweizer KMU",
   description:
     "Dienste planen, Wünsche koordinieren, Zeitsaldo und Ferien verwalten – alles in einer modernen Web-App, die Admins und Mitarbeitende auch mobil nutzen können.",
@@ -11,5 +11,6 @@ export const siteConfig = {
     { label: "Funktionen", href: "#funktionen" },
     { label: "Ablauf", href: "#ablauf" },
     { label: "Zeitkonten", href: "#zeitkonten" },
+    { label: "Preisgestaltung", href: "#preisgestaltung" },
   ],
 } as const;
