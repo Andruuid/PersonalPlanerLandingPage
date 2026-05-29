@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CalendarDays, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
+import { focusWaitlistEmail } from "@/lib/focus-waitlist";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -17,6 +18,12 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  function handleDemoClick(event: React.MouseEvent) {
+    event.preventDefault();
+    setOpen(false);
+    focusWaitlistEmail();
+  }
 
   return (
     <header
@@ -50,16 +57,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button
-            href={siteConfig.appUrl}
-            external
-            variant="ghost"
-            size="sm"
-            className="text-slate-700"
-          >
-            Anmelden
-          </Button>
-          <Button href="#kontakt" size="sm">
+          <Button href="#waitlist-email" size="sm" onClick={handleDemoClick}>
             Demo anfragen
           </Button>
         </div>
@@ -87,16 +85,12 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <div className="mt-3 flex flex-col gap-2 border-t border-slate-100 pt-3">
+            <div className="mt-3 border-t border-slate-100 pt-3">
               <Button
-                href={siteConfig.appUrl}
-                external
-                variant="ghost"
-                className="w-full justify-center text-slate-700"
+                href="#waitlist-email"
+                className="w-full justify-center"
+                onClick={handleDemoClick}
               >
-                Anmelden
-              </Button>
-              <Button href="#kontakt" className="w-full justify-center">
                 Demo anfragen
               </Button>
             </div>

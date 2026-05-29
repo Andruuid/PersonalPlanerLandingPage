@@ -34,8 +34,8 @@ const adminBenefits = [
 ];
 
 const employeeBenefits = [
-  "Eigene Woche jederzeit einsehbar",
-  "Anträge ohne Papierformular",
+  "Schichtplan jederzeit auf dem Smartphone",
+  "Absenzen & Wünsche mobil melden",
   "Transparente Kontostände",
 ];
 

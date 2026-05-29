@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site-config";
 const highlights = [
   "Drag-and-Drop Wochenplanung",
   "Zeitsaldo, Ferien & UEZ in Echtzeit",
-  "Für Admins und Mitarbeitende",
+  "Mobil optimiert: Schichtplan & Anträge für Mitarbeitende",
 ];
 
 export function Hero() {
@@ -42,7 +42,7 @@ export function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button href="#kontakt" size="lg">
-              Kostenlose Demo
+              Auf die Warteliste
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Button

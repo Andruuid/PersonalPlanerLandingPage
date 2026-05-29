@@ -26,6 +26,7 @@ interface ButtonProps {
   className?: string;
   children: React.ReactNode;
   external?: boolean;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
 }
 
 export function Button({
@@ -35,6 +36,7 @@ export function Button({
   className,
   children,
   external,
+  onClick,
 }: ButtonProps) {
   const classes = cn(
     "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
@@ -51,6 +53,7 @@ export function Button({
           className={classes}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={onClick}
         >
           {children}
         </a>
@@ -58,11 +61,15 @@ export function Button({
     }
 
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} onClick={onClick}>
         {children}
       </Link>
     );
   }
 
-  return <button type="button" className={classes}>{children}</button>;
+  return (
+    <button type="button" className={classes} onClick={onClick}>
+      {children}
+    </button>
+  );
 }

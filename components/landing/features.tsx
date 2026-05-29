@@ -18,7 +18,7 @@ const features = [
     icon: Users,
     title: "Mitarbeitersicht & Anträge",
     description:
-      "Teams sehen ihre Woche auf einen Blick und stellen Ferien-, Frei- oder TZT-Wünsche direkt ein – ohne E-Mail-Pingpong.",
+      "Ihr Team sieht Schichten und Zeitkonten jederzeit – auch unterwegs auf dem Smartphone. Ferien, Absenzen und TZT-Wünsche lassen sich direkt melden, ohne E-Mail-Pingpong.",
   },
   {
     icon: Clock3,
