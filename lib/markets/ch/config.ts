@@ -31,6 +31,7 @@ export const chConfig: MarketConfig = {
   footerNav: [
     { label: "FAQ", href: "/faq" },
     { label: "Preise", href: "/preise" },
+    { label: "Sicherheit", href: "/security" },
     { label: "Impressum", href: "/impressum" },
     { label: "Datenschutz", href: "/datenschutz" },
   ],
@@ -56,5 +57,6 @@ export const chConfig: MarketConfig = {
   legal: {
     companyName: "Easyplan AG",
     contentResponsible: "Geschäftsführung der Easyplan AG",
+    dataProtectionOfficer: "Geschäftsführung der Easyplan AG",
   },
 };

@@ -103,8 +103,15 @@ export default function DatenschutzPage() {
               className="font-medium text-brand-700 hover:text-brand-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"
             >
               Sicherheitsseite
+            </Link>{" "}
+            (inkl.{" "}
+            <Link
+              href="/security#kontakt"
+              className="font-medium text-brand-700 hover:text-brand-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"
+            >
+              Sicherheitskontakt
             </Link>
-            .
+            ).
           </p>
         </section>
       </div>

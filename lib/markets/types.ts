@@ -39,6 +39,8 @@ export type MarketConfig = {
   legal?: {
     companyName: string;
     contentResponsible: string;
+    /** Anzeige auf /security (überschreibbar via SECURITY_DPO). */
+    dataProtectionOfficer: string;
   };
 };
 

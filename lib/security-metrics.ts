@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site-config";
+
 /**
  * Dynamic values for the /security page.
  *
@@ -12,7 +14,7 @@
  *    - `SECURITY_STATUS_LABEL` (e.g. "Alle Systeme betriebsbereit")
  *    Later: add `app/api/security-status/route.ts` and fetch from a client wrapper.
  * 4. **Known limitations** — `SECURITY_KNOWN_LIMITATIONS_URL` (GitHub/Notion)
- * 5. **DPO name** — `SECURITY_DPO`
+ * 5. **DPO name** — `SECURITY_DPO` or `legal.dataProtectionOfficer` in market config
  * 6. **Copy updates** — Edit `lib/markets/ch/security.ts` only; use `replaceSecurityMetrics()` for templates.
  */
 
@@ -46,7 +48,10 @@ export function getSecurityMetrics(): SecurityMetrics {
     statusLabel:
       process.env.SECURITY_STATUS_LABEL ?? "Alle Systeme betriebsbereit",
     dataProtectionOfficer:
-      process.env.SECURITY_DPO ?? "[Name/Rolle – ergänzen]",
+      process.env.SECURITY_DPO ??
+      siteConfig.legal?.dataProtectionOfficer ??
+      siteConfig.legal?.contentResponsible ??
+      siteConfig.name,
   };
 }
 
