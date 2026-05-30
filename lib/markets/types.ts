@@ -212,6 +212,62 @@ export type PricingPageContent = {
   bottomCta: string;
 };
 
+export type SecurityIconKey =
+  | "mapPin"
+  | "lock"
+  | "refreshCw"
+  | "download"
+  | "trash2"
+  | "users"
+  | "fileText"
+  | "flaskConical"
+  | "alertCircle"
+  | "activity"
+  | "bug"
+  | "scrollText"
+  | "archive"
+  | "search";
+
+export type SecurityCardContent = {
+  icon: SecurityIconKey;
+  title: string;
+  /** May include {testCount} and {coveragePercent} placeholders. */
+  description: string;
+  showCoverageBadge?: boolean;
+  hrefKey?: "knownLimitations";
+  hrefLabel?: string;
+};
+
+export type SecuritySectionContent = {
+  id: string;
+  eyebrow: string;
+  heading: string;
+  columns: 2 | 3;
+  cards: SecurityCardContent[];
+};
+
+export type SecurityPageContent = {
+  metaTitle: string;
+  metaDescription: string;
+  metaKeywords: string[];
+  breadcrumb: string;
+  hero: {
+    title: string;
+    subline: string;
+    updateNotePrefix: string;
+  };
+  sections: SecuritySectionContent[];
+  contact: {
+    title: string;
+    responsibleTemplate: string;
+    email: string;
+    pgpNote: string;
+    slaCritical: string;
+    slaGeneral: string;
+  };
+  disclaimer: string;
+};
+
 export type UiContent = {
   waitlist: WaitlistFormContent;
   header: HeaderContent;
@@ -276,4 +332,6 @@ export type Market = {
   faq: FaqItem[];
   pricing: PricingPlan[];
   sitemapRoutes: SitemapRoute[];
+  /** CH market only — security & trust page. */
+  security?: SecurityPageContent;
 };

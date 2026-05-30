@@ -98,7 +98,7 @@ export const chLandingPages: Record<string, LandingPageContent> = {
     path: "/excel-dienstplan-alternative",
     title: "Excel Dienstplan Alternative – Personalplanung ohne Tabellen",
     description:
-      "Excel Dienstplan Alternative für Schweizer KMU: Schichtplan, Ferien und Zeitsaldo in einer Cloud-App. Ohne Formeln, ohne Versionen-Chaos, ab CHF 2.90 pro Mitarbeiter.",
+      "Excel Dienstplan Alternative für Schweizer KMU: Schichtplan, Ferien und Zeitsaldo in einer Cloud-App. Ohne Formeln, ohne Versionen-Chaos, ab CHF 3.90 pro Mitarbeiter.",
     keywords: [
       "Excel Dienstplan Alternative",
       "Personalplanung ohne Excel",
@@ -129,7 +129,7 @@ export const chLandingPages: Record<string, LandingPageContent> = {
       {
         heading: "Kosten im Vergleich",
         paragraphs: [
-          "Excel ist gratis, kostet aber Zeit. easyplan startet ab CHF 2.90 pro Mitarbeiter und Monat – für ein Team von 10 Personen sind das CHF 29 im Monat. Monatlich kündbar, ohne Einrichtungsgebühr.",
+          "Excel ist gratis, kostet aber Zeit. easyplan startet ab CHF 3.90 pro Mitarbeiter und Monat (mind. 3 Mitarbeitende) – für ein Team von 3 Personen sind das CHF 11.70 im Monat. Monatlich kündbar, ohne Einrichtungsgebühr.",
         ],
       },
     ],
@@ -143,7 +143,7 @@ export const chLandingPages: Record<string, LandingPageContent> = {
     path: "/schichtplan-software",
     title: "Schichtplan Software Schweiz – Wochenplanung online",
     description:
-      "Schichtplan Software für Schweizer KMU: Wochenplan per Drag-and-Drop, mobile Mitarbeitersicht, Ferien und Zeitsaldo. Cloud-Dienstplan ab CHF 2.90 pro Mitarbeiter.",
+      "Schichtplan Software für Schweizer KMU: Wochenplan per Drag-and-Drop, mobile Mitarbeitersicht, Ferien und Zeitsaldo. Cloud-Dienstplan ab CHF 3.90 pro Mitarbeiter.",
     keywords: [
       "Schichtplan Software",
       "Wochenplanung Mitarbeiter",
@@ -271,7 +271,7 @@ export const chLandingPages: Record<string, LandingPageContent> = {
     relatedLinks: [
       { href: "/schichtplan-software", label: "Schichtplan Software" },
       { href: "/ferienplanung-mitarbeiter", label: "Ferienplanung" },
-      { href: "/preise", label: "Preise ab CHF 2.90" },
+      { href: "/preise", label: "Preise ab CHF 3.90" },
     ],
   },
 };

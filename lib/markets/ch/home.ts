@@ -169,7 +169,7 @@ export const chHome: HomeContent = {
     eyebrow: "Preisgestaltung",
     heading: "Transparente Preise für kleine Teams in der Schweiz",
     intro:
-      "Ab CHF 2.90 pro Mitarbeiter und Monat – ohne versteckte Kosten, monatlich kündbar. Beispiel: 10 Mitarbeitende = CHF 29 pro Monat.",
+      "Ab CHF 3.90 pro Mitarbeiter und Monat – ohne versteckte Kosten, monatlich kündbar. Beispiel: 3 Mitarbeitende = CHF 11.70 pro Monat.",
     popularBadge: "Am beliebtesten",
     planCta: "Jetzt vormerken – ab {price}/MA",
   },

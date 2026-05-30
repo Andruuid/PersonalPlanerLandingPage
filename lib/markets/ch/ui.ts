@@ -68,9 +68,9 @@ export const chUi: UiContent = {
   },
   pricingPage: {
     path: "/preise",
-    metaTitle: "Preise – Personalplanung Software ab CHF 2.90",
+    metaTitle: "Preise – Personalplanung Software ab CHF 3.90",
     metaDescription:
-      "Transparente Preise für Personalplanung Software in der Schweiz. Starter ab CHF 2.90, Plus ab CHF 3.90 pro Mitarbeiter – monatlich kündbar.",
+      "Transparente Preise für Personalplanung Software in der Schweiz. Starter ab CHF 3.90 (mind. 3 MA), Plus ab CHF 4.90 (mind. 6 MA) – Beispiel: 3 Mitarbeitende = CHF 11.70/Monat.",
     metaKeywords: [
       "Personalplanung Software Preise",
       "Dienstplan Software Kosten Schweiz",
@@ -79,7 +79,7 @@ export const chUi: UiContent = {
     breadcrumb: "Preise",
     h1: "Preise für Personalplanung Software in der Schweiz",
     intro:
-      "Einfache, faire Preise für Schweizer KMU – ohne Einrichtungsgebühr und ohne versteckte Kosten. Sie zahlen pro Mitarbeiter und Monat.",
+      "Einfache, faire Preise für Schweizer KMU – ohne Einrichtungsgebühr und ohne versteckte Kosten. Beispiel Starter: 3 Mitarbeitende × CHF 3.90 = CHF 11.70 pro Monat.",
     bottomCta: "Jetzt unverbindlich vormerken",
   },
 };

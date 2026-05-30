@@ -86,6 +86,23 @@ export default function DatenschutzPage() {
             Standort des Hosters ergänzen]
           </p>
         </section>
+
+        <section className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h2 className="text-xl font-semibold text-slate-900">
+            Technische Sicherheit
+          </h2>
+          <p className="mt-3">
+            Details zu Infrastruktur, Verschlüsselung, Tests und Audit-Logs finden
+            Sie auf unserer{" "}
+            <Link
+              href="/security"
+              className="font-medium text-brand-700 hover:text-brand-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"
+            >
+              Sicherheitsseite
+            </Link>
+            .
+          </p>
+        </section>
       </div>
     </article>
   );

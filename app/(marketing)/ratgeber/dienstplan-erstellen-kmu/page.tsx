@@ -103,7 +103,7 @@ export default function DienstplanErstellenArticle() {
             <p className="mt-4 leading-relaxed">
               Ab etwa fünf Mitarbeitenden steigt der Aufwand mit Excel spürbar.
               Eine Cloud-Lösung wie easyplan verbindet Schichtplan, Ferien und
-              Zeitsaldo – ab CHF 2.90 pro Mitarbeiter und Monat.
+              Zeitsaldo – ab CHF 3.90 pro Mitarbeiter und Monat.
             </p>
             <ul className="mt-4 list-disc space-y-2 pl-5">
               <li>

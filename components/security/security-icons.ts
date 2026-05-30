@@ -1,0 +1,35 @@
+import {
+  Activity,
+  AlertCircle,
+  Archive,
+  Bug,
+  Download,
+  FileText,
+  FlaskConical,
+  Lock,
+  MapPin,
+  RefreshCw,
+  ScrollText,
+  Search,
+  Trash2,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
+import type { SecurityIconKey } from "@/lib/markets/types";
+
+export const securityIconMap: Record<SecurityIconKey, LucideIcon> = {
+  mapPin: MapPin,
+  lock: Lock,
+  refreshCw: RefreshCw,
+  download: Download,
+  trash2: Trash2,
+  users: Users,
+  fileText: FileText,
+  flaskConical: FlaskConical,
+  alertCircle: AlertCircle,
+  activity: Activity,
+  bug: Bug,
+  scrollText: ScrollText,
+  archive: Archive,
+  search: Search,
+};

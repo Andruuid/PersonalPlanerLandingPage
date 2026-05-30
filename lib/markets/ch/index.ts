@@ -6,6 +6,7 @@ import { chLandingPages } from "@/lib/markets/ch/landing-pages";
 import { chFaq } from "@/lib/markets/ch/faq";
 import { chPricing } from "@/lib/markets/ch/pricing";
 import { chSitemapRoutes } from "@/lib/markets/ch/routes";
+import { chSecurity } from "@/lib/markets/ch/security";
 
 export const chMarket: Market = {
   config: chConfig,
@@ -15,4 +16,5 @@ export const chMarket: Market = {
   faq: chFaq,
   pricing: chPricing,
   sitemapRoutes: chSitemapRoutes,
+  security: chSecurity,
 };

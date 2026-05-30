@@ -25,6 +25,7 @@ export const chConfig: MarketConfig = {
     { label: "Ablauf", href: "/#ablauf" },
     { label: "Zeitkonten", href: "/#zeitkonten" },
     { label: "Preisgestaltung", href: "/#preisgestaltung" },
+    { label: "Sicherheit", href: "/security" },
     { label: "FAQ", href: "/#faq" },
   ],
   footerNav: [

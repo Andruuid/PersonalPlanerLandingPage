@@ -27,6 +27,7 @@ export const chSitemapRoutes: SitemapRoute[] = [
   { path: "/preise", priority: 0.8, changeFrequency: "monthly" },
   { path: "/faq", priority: 0.7, changeFrequency: "monthly" },
   { path: "/ratgeber/dienstplan-erstellen-kmu", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/security", priority: 0.4, changeFrequency: "monthly" },
   { path: "/impressum", priority: 0.3, changeFrequency: "yearly" },
   { path: "/datenschutz", priority: 0.3, changeFrequency: "yearly" },
 ];
