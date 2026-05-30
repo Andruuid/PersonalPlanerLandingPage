@@ -32,15 +32,19 @@ export default function DatenschutzPage() {
         <section>
           <h2 className="text-xl font-semibold text-slate-900">1. Verantwortliche Stelle</h2>
           <p className="mt-3">
-            Verantwortlich für die Datenbearbeitung ist {siteConfig.name}, erreichbar
-            unter{" "}
+            Verantwortlich für die Datenbearbeitung ist{" "}
+            {siteConfig.legal?.companyName ?? siteConfig.name}, erreichbar unter{" "}
             <a
               href={`mailto:${siteConfig.contactEmail}`}
               className="text-brand-700 hover:text-brand-800"
             >
               {siteConfig.contactEmail}
             </a>
-            . [Adresse und weitere Angaben gemäss Impressum ergänzen]
+            . Weitere Angaben finden Sie im{" "}
+            <Link href="/impressum" className="text-brand-700 hover:text-brand-800">
+              Impressum
+            </Link>
+            .
           </p>
         </section>
 

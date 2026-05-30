@@ -1,7 +1,9 @@
 "use client";
 
 import { Fragment } from "react";
+import Link from "next/link";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import type { HeroHighlight } from "@/lib/markets/types";
 import { Button } from "@/components/ui/button";
 import { market } from "@/lib/markets";
 
@@ -49,10 +51,7 @@ export function Hero() {
 
           <ul className="mt-10 space-y-3">
             {hero.highlights.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-sm text-slate-700">
-                <CheckCircle2 className="h-5 w-5 shrink-0 text-brand-600" />
-                {item}
-              </li>
+              <HeroHighlightItem key={highlightKey(item)} item={item} />
             ))}
           </ul>
         </div>
@@ -146,6 +145,32 @@ function PlanningPreview() {
         ))}
       </div>
     </div>
+  );
+}
+
+function highlightKey(item: HeroHighlight): string {
+  return typeof item === "string" ? item : item.text;
+}
+
+function HeroHighlightItem({ item }: { item: HeroHighlight }) {
+  const text = typeof item === "string" ? item : item.text;
+  const href = typeof item === "string" ? undefined : item.href;
+
+  return (
+    <li className="flex items-start gap-3 text-sm text-slate-700">
+      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
+      {href ? (
+        <Link
+          href={href}
+          className="hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2"
+        >
+          {text}
+          <span className="font-semibold text-brand-700"> →</span>
+        </Link>
+      ) : (
+        <span>{text}</span>
+      )}
+    </li>
   );
 }
 

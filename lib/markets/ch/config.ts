@@ -53,4 +53,8 @@ export const chConfig: MarketConfig = {
     title: "Personalplanung Software für Schweizer KMU",
     subtitle: "Dienstplan, Ferien und Zeitsaldo in einer App – ohne Excel",
   },
+  legal: {
+    companyName: "Easyplan AG",
+    contentResponsible: "Geschäftsführung der Easyplan AG",
+  },
 };

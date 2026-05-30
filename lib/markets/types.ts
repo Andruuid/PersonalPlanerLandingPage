@@ -35,6 +35,11 @@ export type MarketConfig = {
   footerNote: string;
   keywords: string[];
   og: { alt: string; brand: string; title: string; subtitle: string };
+  /** CH Impressum / legal notices (optional per market). */
+  legal?: {
+    companyName: string;
+    contentResponsible: string;
+  };
 };
 
 // ---------------------------------------------------------------------------
@@ -53,6 +58,10 @@ export type HeroPreview = {
   floatRight: { label: string; value: string };
 };
 
+export type HeroHighlight =
+  | string
+  | { text: string; href: string };
+
 export type HeroContent = {
   badge: string;
   titleLead: string;
@@ -60,7 +69,7 @@ export type HeroContent = {
   leadSuffix: string;
   primaryCta: string;
   secondaryCta: string;
-  highlights: string[];
+  highlights: HeroHighlight[];
   preview: HeroPreview;
 };
 

@@ -44,7 +44,8 @@ export const chUi: UiContent = {
   landingTemplate: {
     breadcrumbHome: "Startseite",
     relatedHeading: "Weiterlesen",
-    ctaHeading: "Bereit für einfache Personalplanung?",
+    ctaHeading:
+      "Bereit für einfache Personalplanung? – Ohne Excel und ohne teure Grosssoftware?",
     ctaText:
       "Tragen Sie sich unverbindlich ein – wir informieren Sie, sobald easyplan für Ihren Betrieb verfügbar ist.",
     ctaButton: "Kostenlos vormerken",

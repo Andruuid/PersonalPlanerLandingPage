@@ -17,6 +17,7 @@ export const chHome: HomeContent = {
       "Mehrere Standorte und Betriebe – zentral planen und verwalten",
       "Revisionssichere Historie – jede Änderung nachvollziehbar",
       "Datenschutz und rollenbasierte Rechte für Ihr Team",
+      "Sicherheit & Transparenz – Schweizer/EU-Hosting, Verschlüsselung und Compliance",
     ],
     preview: {
       eyebrow: "Wochenplanung",
@@ -184,7 +185,8 @@ export const chHome: HomeContent = {
   },
   cta: {
     eyebrow: "Early Access",
-    heading: "Bereit für einfache Personalplanung ohne Excel?",
+    heading:
+      "Bereit für einfache Personalplanung? – Ohne Excel und ohne teure Grosssoftware?",
     intro:
       "Tragen Sie sich unverbindlich ein – wir informieren Sie, sobald easyplan für Ihren Betrieb verfügbar ist.",
     finePrint: "Keine Kreditkarte nötig · Unverbindlich · Jederzeit abmeldbar",

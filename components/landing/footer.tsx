@@ -5,6 +5,8 @@ import { siteConfig } from "@/lib/site-config";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const footerLabels = new Set(siteConfig.footerNav.map((item) => item.label));
+  const primaryNav = siteConfig.nav.filter((item) => !footerLabels.has(item.label));
 
   return (
     <footer className="border-t border-slate-200 bg-white">
@@ -22,7 +24,7 @@ export function Footer() {
           </div>
 
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600">
-            {siteConfig.nav.map((item) => (
+            {primaryNav.map((item) => (
               <Link key={item.href} href={item.href} className="hover:text-slate-900">
                 {item.label}
               </Link>

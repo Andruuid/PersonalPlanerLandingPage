@@ -6,12 +6,14 @@ import { MARKET } from "@/lib/market";
 
 export const metadata = createPageMetadata({
   title: "Impressum",
-  description: `Impressum und Kontakt – ${siteConfig.name}, Personalplanung Software für Schweizer KMU.`,
+  description: `Impressum und Kontakt – ${siteConfig.legal?.companyName ?? siteConfig.name}, Personalplanung Software für Schweizer KMU.`,
   path: "/impressum",
 });
 
 export default function ImpressumPage() {
-  if (MARKET !== "CH") notFound();
+  if (MARKET !== "CH" || !siteConfig.legal) notFound();
+
+  const legal = siteConfig.legal;
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-28 sm:px-6 lg:px-8">
@@ -28,15 +30,7 @@ export default function ImpressumPage() {
       <div className="prose prose-slate mt-8 max-w-none space-y-6 text-slate-600">
         <section>
           <h2 className="text-xl font-semibold text-slate-900">Anbieter</h2>
-          <p>
-            {siteConfig.name}
-            <br />
-            [Firmenname / Rechtsform eintragen]
-            <br />
-            [Strasse und Hausnummer]
-            <br />
-            [PLZ Ort], Schweiz
-          </p>
+          <p>{legal.companyName}</p>
         </section>
 
         <section>
@@ -54,16 +48,9 @@ export default function ImpressumPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-slate-900">
-            Handelsregister / UID
-          </h2>
-          <p>[UID-Nummer und Handelsregister-Eintrag ergänzen]</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold text-slate-900">
             Verantwortlich für den Inhalt
           </h2>
-          <p>[Name der verantwortlichen Person ergänzen]</p>
+          <p>{legal.contentResponsible}</p>
         </section>
 
         <section>
